@@ -1,0 +1,46 @@
+name: Daily AI Music Update
+
+on:
+  schedule:
+    # Every day at 06:15 UTC (offset from the top of the hour to avoid
+    # GitHub's peak cron congestion, which can delay or skip runs)
+    - cron: "15 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch Reddit data
+        run: python scripts/fetch_reddit.py
+
+      - name: Update README digest
+        run: python scripts/update_readme.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ README.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: daily AI music digest $(date -u +%F)"
+            git push
+          fi
