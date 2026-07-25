@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-07-24
+### Daily Digest — 2026-07-25
 
-**59 posts** archived from 5 subreddits
+**64 posts** archived from 4 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [Tell the human slop to step it up](https://www.reddit.com/r/SunoAI/comments/1v40vir/tell_the_human_slop_to_step_it_up/) | r/SunoAI | – | – |
-| 2 | [5.0](https://www.reddit.com/r/SunoAI/comments/1v4ey8c/50/) | r/SunoAI | – | – |
-| 3 | [Have you heard any amazing songs on Suno?](https://www.reddit.com/r/SunoAI/comments/1v486yg/have_you_heard_any_amazing_songs_on_suno/) | r/SunoAI | – | – |
-| 4 | [Share you most soulful/human/emotional tracks. Heavy Hitters only.](https://www.reddit.com/r/SunoAI/comments/1v4krol/share_you_most_soulfulhumanemotional_tracks_heavy/) | r/SunoAI | – | – |
-| 5 | [New AI song promotion post](https://www.reddit.com/r/SunoAI/comments/1v4uovj/new_ai_song_promotion_post/) | r/SunoAI | – | – |
-| 6 | [wellp i did it](https://www.reddit.com/r/SunoAI/comments/1v4o9s1/wellp_i_did_it/) | r/SunoAI | – | – |
-| 7 | [Anyone else depressed/grieving and turning their notes into Suno songs just to get through](https://www.reddit.com/r/SunoAI/comments/1v4x160/anyone_else_depressedgrieving_and_turning_their/) | r/SunoAI | – | – |
-| 8 | [I vs Suno. I honestly didn't expect this outcome](https://www.reddit.com/r/SunoAI/comments/1v4r1vv/i_vs_suno_i_honestly_didnt_expect_this_outcome/) | r/SunoAI | – | – |
-| 9 | [What has Suno Taught you about Your Songwriting style](https://www.reddit.com/r/SunoAI/comments/1v4f7bl/what_has_suno_taught_you_about_your_songwriting/) | r/SunoAI | – | – |
-| 10 | [The Better My Prompt Engineering Got, The Fewer Songs I Wanted To Publish](https://www.reddit.com/r/SunoAI/comments/1v4381k/the_better_my_prompt_engineering_got_the_fewer/) | r/SunoAI | – | – |
+| 1 | [Didn't think people like this genuinely existed. Is this a common thing?](https://www.reddit.com/r/SunoAI/comments/1v5kgv2/didnt_think_people_like_this_genuinely_existed_is/) | r/SunoAI | – | – |
+| 2 | [I thought songs you made on Free couldn't get commercial rights even if you upgraded after](https://www.reddit.com/r/SunoAI/comments/1v5awop/i_thought_songs_you_made_on_free_couldnt_get/) | r/SunoAI | – | – |
+| 3 | [Does a Suno account gradually become trapped in a creative attractor? (Long-term Pro user ](https://www.reddit.com/r/SunoAI/comments/1v5zynr/does_a_suno_account_gradually_become_trapped_in_a/) | r/SunoAI | – | – |
+| 4 | [Idea: A 30-Day Suno Song Challenge with Random Genre + Subject, Daily Winners, and a Liste](https://www.reddit.com/r/SunoAI/comments/1v5cqou/idea_a_30day_suno_song_challenge_with_random/) | r/SunoAI | – | – |
+| 5 | [Writing NES/chiptune music. Any tips to get the right sound?](https://www.reddit.com/r/SunoAI/comments/1v5laim/writing_neschiptune_music_any_tips_to_get_the/) | r/SunoAI | – | – |
+| 6 | [\[Cinematic EDM\] Spiritual Exile, Part II: Postumus by SlipshodDuke, Suno v5](https://www.reddit.com/r/SunoAI/comments/1v5tqev/cinematic_edm_spiritual_exile_part_ii_postumus_by/) | r/SunoAI | – | – |
+| 7 | [\[Electro swing Dubstep\] One More Drink at the Speakeasy by SK](https://www.reddit.com/r/SunoAI/comments/1v5ru0w/electro_swing_dubstep_one_more_drink_at_the/) | r/SunoAI | – | – |
+| 8 | [Hidden duration trick: set it in v5.5, then switch models — the duration setting stays act](https://www.reddit.com/r/SunoAI/comments/1v5lt17/hidden_duration_trick_set_it_in_v55_then_switch/) | r/SunoAI | – | – |
+| 9 | [\[Sophistindustrial\] Chrome Longing by Cyborgized](https://www.reddit.com/r/SunoAI/comments/1v5k7t0/sophistindustrial_chrome_longing_by_cyborgized/) | r/SunoAI | – | – |
+| 10 | [Problem with voices](https://www.reddit.com/r/SunoAI/comments/1v5axti/problem_with_voices/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-07-24.json`](data/daily/2026-07-24.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-07-25.json`](data/daily/2026-07-25.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-07-24 02:32 UTC_
+_Last updated: 2026-07-25 11:01 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
