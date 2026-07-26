@@ -67,7 +67,7 @@ Two **separate** cron jobs:
   - a local env var / secrets file on the LM Studio machine (for Cron B),
   never committed to git, never pasted into chat.
 
-**Existing schema (all tables currently empty, `rows: 0`):**
+**Schema, as of the categorized-chunk migration (`add_chunk_categorization_and_lifecycle`, applied 2026-07-25):**
 
 ```
 public.documents
@@ -78,41 +78,68 @@ public.documents
   raw_content   text, nullable
   metadata      jsonb, default '{}'
   created_at    timestamptz, default now()
+  -- UNIQUE partial index: only one row where source_type='knowledge_base'
+  -- can ever exist. That row is already seeded (title "AI Music Pulse —
+  -- Running Knowledge Base", raw_content NULL). Treat it as the container
+  -- Cron B's categorized chunks hang off of — upsert-safe by design.
 
 public.chunks
-  id            uuid PK, default gen_random_uuid()
-  document_id   uuid  -> documents.id
-  chunk_index   int4
-  content       text
-  embedding     vector, nullable   -- pgvector
-  tsv           tsvector, generated from content (full-text search)
-  token_count   int4, nullable
-  metadata      jsonb, default '{}'
-  created_at    timestamptz, default now()
+  id             uuid PK, default gen_random_uuid()
+  document_id    uuid  -> documents.id
+  chunk_index    int4
+  content        text
+  embedding      vector, nullable   -- pgvector
+  tsv            tsvector, generated from content (full-text search)
+  token_count    int4, nullable
+  metadata       jsonb, default '{}'
+  created_at     timestamptz, default now()
+  category       text, nullable     -- NEW
+  status         text NOT NULL default 'active'
+                 CHECK (status IN ('active','superseded','stale'))  -- NEW
+  superseded_by  uuid -> chunks.id, nullable                        -- NEW
 
 public.eval_queries   -- for retrieval eval, not needed for this task
 public.eval_runs      -- for retrieval eval, not needed for this task
 ```
 
-This is a **RAG-ready schema someone already built** (pgvector + tsvector
-hybrid search, chunking, eval harness) and it fits this task well without
-inventing new tables. Proposed mapping (recommend confirming with the user
-before building, but this is the natural fit):
+This was a RAG-ready schema someone already built (pgvector + tsvector
+hybrid search, chunking, eval harness); it's now been extended for this
+task rather than adding new tables. Mapping, already decided (not just
+proposed):
 
 - Each fetched Reddit post → one `documents` row:
   `source_type='reddit_post'`, `source_url=permalink`, `title=post title`,
   `raw_content=selftext`, `metadata={subreddit, topic, score, num_comments,
   author, created_utc, fetch_date}`.
-- The "running context" itself → **one** `documents` row that Cron B
-  **upserts** (not inserts fresh each day): e.g. `source_type='knowledge_base'`
-  with a stable identifying key in `metadata` (or just "the single row where
-  `source_type='knowledge_base'`"), `raw_content` = the current accumulated
-  summary text, updated in place each run so it keeps evolving.
-- Optional/stretch: also chunk+embed the running context into `chunks` so
-  it's retrievable via the same vector/full-text search as everything else —
-  requires an embedding model too (LM Studio can serve one, or use a small
-  dedicated embedding model). Not required for the core ask; flag as a
-  follow-up, don't build it unasked.
+- The running knowledge base is **not** one big text blob. It's the single
+  `documents` row with `source_type='knowledge_base'` (already seeded, see
+  above) acting as a container, with each **discrete fact/nugget** stored as
+  its own row in `chunks` (`document_id` pointing at that container row):
+  - `content` — the synthesized nugget text (short, LLM-written)
+  - `category` — one of: `model_release`, `bug_report`, `workflow_tip`,
+    `community_sentiment`, `industry_news`, `tooling_comparison`,
+    `policy_change`. **Not DB-enforced** (no CHECK/enum) — validate this
+    list in the summarizer's prompt instead, so the taxonomy can grow
+    without a migration. If you add a category, update this list here too.
+  - `status` — `active` by default; the summarizer should set a chunk to
+    `superseded` (and point `superseded_by` at the replacement chunk) when
+    new posts contradict/update an existing fact, e.g. "bug X reported in
+    v5.5" superseded by "bug X fixed in v5.6" — not just appended alongside it.
+  - `metadata` — free-form provenance: `{source_post_ids: [...],
+    first_seen_date, last_confirmed_date, mention_count}`. Multiple source
+    Reddit posts can back one chunk; that's why this is an array in jsonb
+    rather than a second FK column.
+  - `embedding` — populate this if/when an embedding model is wired up
+    (LM Studio can serve one, or use a small dedicated embedding model).
+    Not required for the core ask; the `tsv` full-text column already makes
+    chunks searchable without it. Treat embeddings as a follow-up, don't
+    build it unasked.
+
+**Still to design/decide (this is schema only, not the summarizer logic):**
+the actual "is this genuinely new, or does it update/duplicate an existing
+chunk" check that Cron B runs before writing — i.e. how it decides whether
+to insert a new chunk, mark an old one `superseded`, or skip because nothing
+changed. That's the next piece of work, not yet built.
 
 ## 5. Open blocker — LM Studio location (unresolved, ask the user)
 
