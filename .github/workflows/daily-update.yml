@@ -30,6 +30,12 @@ jobs:
       - name: Fetch Reddit data
         run: python scripts/fetch_reddit.py
 
+      - name: Sync posts to Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python scripts/sync_to_supabase.py
+
       - name: Update README digest
         run: python scripts/update_readme.py
 

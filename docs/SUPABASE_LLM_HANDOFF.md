@@ -162,23 +162,48 @@ from the user:
 
 ## 6. Concrete next steps
 
-1. Resolve §5 with the user.
-2. Get the Supabase service role key from the user (dashboard, not MCP).
-3. Write `scripts/fetch_reddit_supabase.py` — same fetch logic as
-   `scripts/fetch_reddit.py`, but upsert into `documents` (dedupe by
-   `source_url`/reddit post id in metadata) instead of writing local JSON.
-   Update `.github/workflows/daily-update.yml` to call it and drop the
-   git-commit step (or keep both during a transition period if the user
-   wants a fallback).
-4. Write `scripts/summarize_context.py` — queries `documents` for
+**Done:**
+
+- ✅ Categorized-chunk schema applied (§4).
+- ✅ Backfilled 64 posts from `data/daily/2026-07-25.json` into `documents`
+  (`source_type='reddit_post'`) directly via the Supabase MCP connector, to
+  prove the mapping and seed real data before automation existed.
+- ✅ `scripts/sync_to_supabase.py` written — reads a day's
+  `data/daily/YYYY-MM-DD.json` (today by default, or a date as argv[1]) and
+  upserts each post into `documents`, keyed on `source_url` via
+  `uniq_reddit_post_url` (safe to re-run). Uses `SUPABASE_URL` +
+  `SUPABASE_SERVICE_ROLE_KEY` env vars, PostgREST's REST API directly
+  (`Prefer: resolution=merge-duplicates`), stdlib-only like the original
+  fetch script. **Kept local JSON writing too** — `fetch_reddit.py` is
+  unchanged, this runs as an additional step, not a replacement. Whether to
+  eventually retire the JSON files is still open (§7).
+- ✅ `.github/workflows/daily-update.yml` updated — now runs
+  `scripts/sync_to_supabase.py` right after the Reddit fetch, before the
+  README digest step. It reads `${{ secrets.SUPABASE_URL }}` and
+  `${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}`.
+
+**Still blocked / not done:**
+
+1. **The GitHub Actions secrets aren't set yet.** `SUPABASE_URL` (safe:
+   `https://xocrwemfdxhuefdzolxv.supabase.co`) and
+   `SUPABASE_SERVICE_ROLE_KEY` (get from the Supabase dashboard, Settings →
+   API — not retrievable via MCP, see §4) need to be added at
+   github.com/rughmax2-ai/AI-Music-Pulse/settings/secrets/actions before the
+   next scheduled run, or `sync_to_supabase.py` will fail with a clear
+   "must be set" error and the whole workflow run will fail (fetch still
+   succeeds and commits first — only the Supabase sync step fails).
+2. Resolve §5 (LM Studio host/port) with the user — as of this handoff,
+   still unresolved; user is moving to the laptop that actually has it.
+3. Write `scripts/summarize_context.py` — queries `documents` for
    `source_type='reddit_post'` rows from the current fetch day, calls LM
-   Studio's chat completions endpoint with a prompt like "here is today's
-   running context + today's new posts, extract what's genuinely useful and
-   produce an updated running context," then upserts the result into the
-   `source_type='knowledge_base'` document.
-5. Install this as a cron (crontab or systemd timer, per what §5 decides)
-   on the LM Studio machine.
-6. Test both crons manually end-to-end before trusting the schedule.
+   Studio's chat completions endpoint, and for each genuinely useful nugget
+   either inserts a new `chunks` row (with a `category` from the taxonomy in
+   §4) or marks an existing chunk `superseded` and inserts the replacement.
+   The "is this actually new" check itself still needs to be designed — not
+   just "call the LLM and store whatever it says."
+4. Install `summarize_context.py` as a cron (crontab or systemd timer, per
+   what §5 decides) on the LM Studio machine.
+5. Test both crons manually end-to-end before trusting the schedule.
 
 ## 7. Things NOT decided yet — don't assume
 
