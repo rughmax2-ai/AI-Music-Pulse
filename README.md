@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-07-25
+### Daily Digest — 2026-07-27
 
-**64 posts** archived from 4 subreddits
+**63 posts** archived from 4 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [Didn't think people like this genuinely existed. Is this a common thing?](https://www.reddit.com/r/SunoAI/comments/1v5kgv2/didnt_think_people_like_this_genuinely_existed_is/) | r/SunoAI | – | – |
-| 2 | [I thought songs you made on Free couldn't get commercial rights even if you upgraded after](https://www.reddit.com/r/SunoAI/comments/1v5awop/i_thought_songs_you_made_on_free_couldnt_get/) | r/SunoAI | – | – |
-| 3 | [Does a Suno account gradually become trapped in a creative attractor? (Long-term Pro user ](https://www.reddit.com/r/SunoAI/comments/1v5zynr/does_a_suno_account_gradually_become_trapped_in_a/) | r/SunoAI | – | – |
-| 4 | [Idea: A 30-Day Suno Song Challenge with Random Genre + Subject, Daily Winners, and a Liste](https://www.reddit.com/r/SunoAI/comments/1v5cqou/idea_a_30day_suno_song_challenge_with_random/) | r/SunoAI | – | – |
-| 5 | [Writing NES/chiptune music. Any tips to get the right sound?](https://www.reddit.com/r/SunoAI/comments/1v5laim/writing_neschiptune_music_any_tips_to_get_the/) | r/SunoAI | – | – |
-| 6 | [\[Cinematic EDM\] Spiritual Exile, Part II: Postumus by SlipshodDuke, Suno v5](https://www.reddit.com/r/SunoAI/comments/1v5tqev/cinematic_edm_spiritual_exile_part_ii_postumus_by/) | r/SunoAI | – | – |
-| 7 | [\[Electro swing Dubstep\] One More Drink at the Speakeasy by SK](https://www.reddit.com/r/SunoAI/comments/1v5ru0w/electro_swing_dubstep_one_more_drink_at_the/) | r/SunoAI | – | – |
-| 8 | [Hidden duration trick: set it in v5.5, then switch models — the duration setting stays act](https://www.reddit.com/r/SunoAI/comments/1v5lt17/hidden_duration_trick_set_it_in_v55_then_switch/) | r/SunoAI | – | – |
-| 9 | [\[Sophistindustrial\] Chrome Longing by Cyborgized](https://www.reddit.com/r/SunoAI/comments/1v5k7t0/sophistindustrial_chrome_longing_by_cyborgized/) | r/SunoAI | – | – |
-| 10 | [Problem with voices](https://www.reddit.com/r/SunoAI/comments/1v5axti/problem_with_voices/) | r/SunoAI | – | – |
+| 1 | [This is how AI music wins](https://www.reddit.com/r/SunoAI/comments/1v7fux9/this_is_how_ai_music_wins/) | r/SunoAI | – | – |
+| 2 | [Wrote an article going a little in depth what's going on when you hit the generate button.](https://www.reddit.com/r/SunoAI/comments/1v7i9mv/wrote_an_article_going_a_little_in_depth_whats/) | r/SunoAI | – | – |
+| 3 | [New AI song promotion post](https://www.reddit.com/r/SunoAI/comments/1v7oy8z/new_ai_song_promotion_post/) | r/SunoAI | – | – |
+| 4 | [I decided to wait a few years before distributing my music](https://www.reddit.com/r/SunoAI/comments/1v7d9cz/i_decided_to_wait_a_few_years_before_distributing/) | r/SunoAI | – | – |
+| 5 | [Why So Much Hate Towards AI Music?](https://www.reddit.com/r/SunoAI/comments/1v7nkyf/why_so_much_hate_towards_ai_music/) | r/SunoAI | – | – |
+| 6 | [Unsolicited tip: Want to take tracks to the next level write your lyrics. Ai is shit at wr](https://www.reddit.com/r/SunoAI/comments/1v7ppk5/unsolicited_tip_want_to_take_tracks_to_the_next/) | r/SunoAI | – | – |
+| 7 | [Suddenly got banned for the Sino Discord](https://www.reddit.com/r/SunoAI/comments/1v7h3ng/suddenly_got_banned_for_the_sino_discord/) | r/SunoAI | – | – |
+| 8 | [\[Warm Melancholic Indietronica\] Black Cat White Cat](https://www.reddit.com/r/SunoAI/comments/1v7gye5/warm_melancholic_indietronica_black_cat_white_cat/) | r/SunoAI | – | – |
+| 9 | [Hi community. What styles do you write in, and which ones are your favorites—the ones that](https://www.reddit.com/r/SunoAI/comments/1v7y198/hi_community_what_styles_do_you_write_in_and/) | r/SunoAI | – | – |
+| 10 | [Copyrighted material from 1529](https://www.reddit.com/r/SunoAI/comments/1v7mekj/copyrighted_material_from_1529/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-07-25.json`](data/daily/2026-07-25.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-07-27.json`](data/daily/2026-07-27.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-07-25 11:01 UTC_
+_Last updated: 2026-07-27 16:03 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
