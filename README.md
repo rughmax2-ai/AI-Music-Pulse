@@ -88,8 +88,20 @@ Each daily archive (`data/daily/YYYY-MM-DD.json`) looks like:
     "posts_by_subreddit": {"SunoAI": 42, "udiomusic": 25},
     "total_score": 3120,
     "total_comments": 954,
-    "top_post": "https://www.reddit.com/r/SunoAI/comments/..."
+    "top_post": "https://www.reddit.com/r/SunoAI/comments/...",
+    "top_post_by_importance": "https://www.reddit.com/r/SunoAI/comments/..."
   },
+  "highlights": [
+    {
+      "id": "1v40vir",
+      "title": "Truncated title…",
+      "excerpt": "Short summary excerpt of the post…",
+      "subreddit": "SunoAI",
+      "topic": "Suno",
+      "permalink": "https://www.reddit.com/r/SunoAI/comments/…",
+      "importance_score": 132
+    }
+  ],
   "errors": {},
   "posts": [
     {
@@ -106,7 +118,10 @@ Each daily archive (`data/daily/YYYY-MM-DD.json`) looks like:
       "link_flair_text": "Discussion",
       "subreddit": "SunoAI",
       "topic": "Suno",
-      "transport": "json"
+      "transport": "json",
+      "truncated_title": "…",
+      "summary_excerpt": "…",
+      "importance_score": 132
     }
   ]
 }
@@ -124,6 +139,9 @@ All sources live in [`sources.json`](sources.json):
 | `keywords` | Case-insensitive keyword list for filtering |
 | `posts_per_subreddit` | Max posts fetched per subreddit |
 | `min_score` | Minimum upvote score to be archived |
+| `summary_excerpt_chars` | Optional max chars for per-post summary excerpt (default `280`) |
+| `truncated_title_chars` | Optional max chars for per-post truncated title (default `120`) |
+| `highlights_per_day` | Optional number of top importance highlights at archive root (default `10`) |
 
 Add a subreddit by appending one line to `sources.json` — no code
 changes needed.

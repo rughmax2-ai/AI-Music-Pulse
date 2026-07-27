@@ -38,6 +38,11 @@ USER_AGENT = (
 
 ATOM_NS = {"a": "http://www.w3.org/2005/Atom"}
 
+MAX_SELFTEXT_CHARS = 2000
+TRUNCATED_TITLE_CHARS = 120
+SUMMARY_EXCERPT_CHARS = 280
+HIGHLIGHTS_PER_DAY = 10
+
 
 def http_get(url: str, retries: int = 3, backoff: float = 5.0) -> bytes:
     """GET a URL with retries and gzip support. Raises on final failure."""
@@ -98,7 +103,7 @@ def fetch_via_json(subreddit: str, limit: int) -> list[dict]:
             "num_comments": d.get("num_comments", 0),
             "permalink": f"https://www.reddit.com{d.get('permalink', '')}",
             "url": d.get("url"),
-            "selftext": (d.get("selftext") or "")[:2000],
+            "selftext": (d.get("selftext") or "")[:MAX_SELFTEXT_CHARS],
             "link_flair_text": d.get("link_flair_text"),
             "is_video": d.get("is_video", False),
             "over_18": d.get("over_18", False),
@@ -111,6 +116,53 @@ def strip_html(raw: str) -> str:
     text = re.sub(r"<[^>]+>", " ", raw or "")
     text = html.unescape(text)
     return re.sub(r"\s+", " ", text).strip()
+
+
+def truncate_text(text: str, max_len: int) -> str:
+    text = re.sub(r"\s+", " ", text or "").strip()
+    if len(text) <= max_len:
+        return text
+    return text[: max_len - 1].rstrip() + "…"
+
+
+def clean_selftext(text: str) -> str:
+    cleaned = re.sub(r"\s+", " ", text or "").strip()
+    cleaned = re.sub(
+        r"\s*submitted by /u/[^[]+\[link\]\s*\[comments\]\s*$",
+        "",
+        cleaned,
+        flags=re.IGNORECASE,
+    )
+    return cleaned
+
+
+def compute_importance(post: dict, keywords: list[str]) -> int:
+    score = post.get("score")
+    comments = post.get("num_comments")
+    upvote_ratio = post.get("upvote_ratio")
+    title = (post.get("title") or "").lower()
+    body = clean_selftext(post.get("selftext", "")).lower()
+
+    total = 0.0
+    if isinstance(score, int):
+        total += min(score, 500) * 0.08
+    if isinstance(comments, int):
+        total += min(comments, 200) * 0.22
+    if isinstance(upvote_ratio, (float, int)):
+        total += float(upvote_ratio) * 25.0
+
+    keyword_hits = 0
+    for kw in keywords:
+        if kw in title:
+            keyword_hits += 2
+        elif kw in body:
+            keyword_hits += 1
+    total += min(keyword_hits, 12) * 3.0
+
+    if body:
+        total += min(len(body), 1200) / 100.0
+
+    return int(round(total))
 
 
 def fetch_via_rss(subreddit: str, limit: int) -> list[dict]:
@@ -135,7 +187,7 @@ def fetch_via_rss(subreddit: str, limit: int) -> list[dict]:
             "num_comments": None,
             "permalink": link_el.get("href") if link_el is not None else None,
             "url": link_el.get("href") if link_el is not None else None,
-            "selftext": strip_html(content)[:2000],
+            "selftext": strip_html(content)[:MAX_SELFTEXT_CHARS],
             "link_flair_text": None,
             "is_video": False,
             "over_18": False,
@@ -197,6 +249,9 @@ def build_stats(posts: list[dict]) -> dict:
                               if isinstance(p.get("num_comments"), int)),
         "top_post": max(scored, key=lambda p: p["score"])["permalink"]
         if scored else None,
+        "top_post_by_importance": max(
+            posts, key=lambda p: p.get("importance_score", 0)
+        )["permalink"] if posts else None,
     }
 
 
@@ -219,11 +274,40 @@ def update_index(day_key: str, stats: dict) -> None:
                           encoding="utf-8")
 
 
+def build_highlights(posts: list[dict], limit: int) -> list[dict]:
+    ranked = sorted(posts, key=lambda p: p.get("importance_score", 0), reverse=True)
+    highlights: list[dict] = []
+    seen: set[str] = set()
+    for post in ranked:
+        pid = post.get("id") or post.get("permalink")
+        if pid in seen:
+            continue
+        seen.add(pid)
+        highlights.append({
+            "id": post.get("id"),
+            "title": post.get("truncated_title", post.get("title", "")),
+            "excerpt": post.get("summary_excerpt", ""),
+            "subreddit": post.get("subreddit"),
+            "topic": post.get("topic"),
+            "permalink": post.get("permalink"),
+            "importance_score": post.get("importance_score", 0),
+            "score": post.get("score"),
+            "num_comments": post.get("num_comments"),
+            "transport": post.get("transport"),
+        })
+        if len(highlights) >= limit:
+            break
+    return highlights
+
+
 def main() -> int:
     sources = json.loads(SOURCES_FILE.read_text(encoding="utf-8"))
     keywords = [k.lower() for k in sources.get("keywords", [])]
     limit = sources.get("posts_per_subreddit", 25)
     min_score = sources.get("min_score", 0)
+    excerpt_chars = int(sources.get("summary_excerpt_chars", SUMMARY_EXCERPT_CHARS))
+    title_chars = int(sources.get("truncated_title_chars", TRUNCATED_TITLE_CHARS))
+    highlights_per_day = int(sources.get("highlights_per_day", HIGHLIGHTS_PER_DAY))
 
     now = datetime.now(timezone.utc)
     day_key = now.strftime("%Y-%m-%d")
@@ -246,9 +330,15 @@ def main() -> int:
         if pid and pid in seen:
             continue
         seen.add(pid)
+        cleaned_body = clean_selftext(p.get("selftext", ""))
+        p["summary_excerpt"] = truncate_text(cleaned_body or p.get("title", ""), excerpt_chars)
+        p["truncated_title"] = truncate_text(p.get("title", ""), title_chars)
+        p["importance_score"] = compute_importance(p, keywords)
         deduped.append(p)
 
+    deduped.sort(key=lambda p: p.get("importance_score", 0), reverse=True)
     stats = build_stats(deduped)
+    highlights = build_highlights(deduped, highlights_per_day)
 
     archive = {
         "schema_version": 1,
@@ -261,6 +351,7 @@ def main() -> int:
             "window": "day",
         },
         "stats": stats,
+        "highlights": highlights,
         "errors": errors,
         "posts": deduped,
     }
