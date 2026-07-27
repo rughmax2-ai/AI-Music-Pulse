@@ -31,6 +31,11 @@ jobs:
         run: python scripts/fetch_reddit.py
 
       - name: Sync posts to Supabase
+        # Best-effort: the core digest (fetch -> README -> commit) must keep
+        # working even if Supabase secrets are missing or the sync fails for
+        # any other reason. Check this step's own status in the Actions tab
+        # to notice when it's failing silently.
+        continue-on-error: true
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
