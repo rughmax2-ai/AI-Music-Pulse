@@ -7,6 +7,7 @@ structured JSON archive, and refreshes the digest below — no servers, no
 manual work.
 
 [![Daily AI Music Update](https://github.com/rughmax2-ai/AI-Music-Pulse/actions/workflows/daily-update.yml/badge.svg)](https://github.com/rughmax2-ai/AI-Music-Pulse/actions/workflows/daily-update.yml)
+[![Pages Running Summary](https://github.com/rughmax2-ai/AI-Music-Pulse/actions/workflows/pages-summary.yml/badge.svg)](https://github.com/rughmax2-ai/AI-Music-Pulse/actions/workflows/pages-summary.yml)
 
 <!-- DIGEST:START -->
 
@@ -61,6 +62,11 @@ _Last updated: 2026-07-25 11:01 UTC_
    the rest of this README is never touched by automation.
 4. **Commit** — The workflow commits and pushes only when something
    actually changed.
+5. **Running summary for Pages** — `scripts/build_pages_summary.py`
+   truncates each day to the most important highlights, builds a running
+   summary (`data/running-summary.json`), and publishes a static page at
+   `docs/index.html` (plus `docs/summary.json`) via a separate scheduled
+   workflow.
 
 ## Data Schema
 
@@ -129,6 +135,7 @@ Requires Python 3.10+ and nothing else (standard library only):
 ```bash
 python scripts/fetch_reddit.py    # writes data/daily/YYYY-MM-DD.json
 python scripts/update_readme.py   # refreshes the digest in this README
+python scripts/build_pages_summary.py  # builds running summary + docs page
 ```
 
 ## Roadmap
@@ -137,7 +144,7 @@ python scripts/update_readme.py   # refreshes the digest in this README
       fetcher module writing to the same schema)
 - [ ] Weekly trend rollups (top keywords, score deltas across days)
 - [ ] Hacker News and YouTube sources
-- [ ] Static site rendering of the archive via GitHub Pages
+- [x] Static site rendering of the archive via GitHub Pages
 
 ## License
 

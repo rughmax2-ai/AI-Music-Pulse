@@ -31,11 +31,28 @@ git push -u origin main
 
 From then on it runs automatically every day at **06:15 UTC**.
 
+## 4. (Optional) Enable GitHub Pages running summary
+
+This repo now has a second scheduled workflow
+(`.github/workflows/pages-summary.yml`) that builds a running summary page
+in `docs/index.html` and `docs/summary.json`.
+
+To publish it:
+
+1. Go to **Settings → Pages**.
+2. Under **Build and deployment**, choose **Deploy from a branch**.
+3. Branch: `main`, folder: `/docs`, then Save.
+4. Run **Build Running Summary for Pages** once from the Actions tab.
+
+After that, the summary workflow runs daily at **08:30 UTC** and updates the
+published page.
+
 ## Notes & maintenance
 
 - **Schedule**: edit the cron line in
-  `.github/workflows/daily-update.yml`. GitHub cron uses UTC and may
-  delay runs by a few minutes under load.
+  `.github/workflows/daily-update.yml` and/or
+  `.github/workflows/pages-summary.yml`. GitHub cron uses UTC and may delay
+  runs by a few minutes under load.
 - **60-day inactivity rule**: GitHub disables scheduled workflows in
   repos with no activity for 60 days. Since this workflow commits daily,
   it keeps itself alive automatically; if it ever fails for 60 straight
