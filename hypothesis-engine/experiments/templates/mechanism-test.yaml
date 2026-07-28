@@ -1,0 +1,135 @@
+schema_version: "1.0"
+experiment_id: "exp_YYYYMMDD_short_slug_m1"
+observation_id: "obs_short_slug"
+cycle_number: 2
+cycle_type: "mechanism"
+status: "draft"
+
+surviving_existence_result:
+  experiment_id: "exp_YYYYMMDD_short_slug_e1"
+  preregistration_sha256: "[LOCKED DIGEST]"
+  classification: "effect_detected"
+  registered_effect: "[EFFECT SIZE AND UNCERTAINTY]"
+
+scope:
+  provider: "suno"
+  model_version: "v5.5"
+  interface_mode: "[EXACT SURFACE]"
+  fields_under_test:
+    - "Style"
+
+hypotheses:
+  - id: "H1"
+    statement: "[FALSIFIABLE MECHANISM 1]"
+    prediction: "[DISTINCT OBSERVABLE SIGNATURE]"
+    primary_measurement: "[ONE METRIC]"
+    kill_condition: "[RESULT THAT KILLS H1]"
+  - id: "H2"
+    statement: "[FALSIFIABLE MECHANISM 2]"
+    prediction: "[DISTINCT OBSERVABLE SIGNATURE]"
+    primary_measurement: "[ONE METRIC]"
+    kill_condition: "[RESULT THAT KILLS H2]"
+  - id: "H3"
+    statement: "[FALSIFIABLE MECHANISM 3]"
+    prediction: "[DISTINCT OBSERVABLE SIGNATURE]"
+    primary_measurement: "[ONE METRIC]"
+    kill_condition: "[RESULT THAT KILLS H3]"
+
+baseline:
+  style: "[FIXED BASELINE STYLE]"
+  lyrics: "[FIXED BASELINE LYRICS OR INSTRUMENTAL FLAG]"
+  exclude: "[FIXED BASELINE EXCLUSIONS]"
+  other_controls: {}
+
+conditions:
+  - code: "A"
+    blind_code: "EMBER"
+    label: "[CONTROL]"
+    n_planned: 10
+    change: "[CONDITION A]"
+  - code: "B"
+    blind_code: "RIVER"
+    label: "[ABLATION 1]"
+    n_planned: 10
+    change: "[ONE DECLARED CHANGE]"
+  - code: "C"
+    blind_code: "STONE"
+    label: "[ABLATION 2, ONLY IF REQUIRED TO DISCRIMINATE]"
+    n_planned: 10
+    change: "[ONE DECLARED CHANGE]"
+
+prediction_matrix:
+  - condition_code: "A"
+    H1: "[DIRECTION/MAGNITUDE]"
+    H2: "[DIRECTION/MAGNITUDE]"
+    H3: "[DIRECTION/MAGNITUDE]"
+  - condition_code: "B"
+    H1: "[DIRECTION/MAGNITUDE]"
+    H2: "[DIRECTION/MAGNITUDE]"
+    H3: "[DIRECTION/MAGNITUDE]"
+  - condition_code: "C"
+    H1: "[DIRECTION/MAGNITUDE]"
+    H2: "[DIRECTION/MAGNITUDE]"
+    H3: "[DIRECTION/MAGNITUDE]"
+
+discriminability_review:
+  all_hypothesis_columns_distinct: false
+  pairs_separated:
+    - "H1_vs_H2"
+    - "H1_vs_H3"
+    - "H2_vs_H3"
+  information_gain_rank:
+    - test: "[SELECTED TEST]"
+      discrimination_value: "[PRECOMPUTED SCORE]"
+      estimated_renders: 30
+      estimated_rating_minutes: 8
+      setup_cost: "low"
+  selected_test_reason: "[WHY THIS IS THE CHEAPEST DECISIVE TEST]"
+
+collection:
+  render_order_seed: "[PUBLIC RANDOMIZATION SEED]"
+  render_order: []
+  generation_window: "[PLANNED WINDOW]"
+  version_drift_rule: "stop_and_mark_deviation"
+  artifact_policy: "private_audio_with_opaque_reference_and_sha256"
+
+human_rating:
+  rater_count: 1
+  blind: true
+  maximum_listen_seconds: 15
+  scale:
+    kill: 0
+    fine: 1
+    magic: 2
+  primary_endpoint: "[ONE REGISTERED ENDPOINT]"
+  secondary_endpoints: []
+  magic_verdict: "one_sentence_ear_language"
+
+acoustic_measurement:
+  required: false
+  primary_metric: null
+  secondary_metrics: []
+  tool_versions: {}
+  parameters: {}
+  measurement_failure_rule: "retain_render_and_mark_metric_missing"
+
+effect_gate:
+  registered_statistic: "[STATISTIC]"
+  minimum_practical_effect: "[NUMBER AND UNIT]"
+  uncertainty_method: "[LOCKED METHOD]"
+  confidence_level: 0.80
+
+analysis:
+  hypothesis_outcomes:
+    allowed:
+      - "surviving"
+      - "killed"
+      - "ambiguous"
+  missing_data: "do_not_impute"
+  multiple_testing: "registered_primary_contrasts_only"
+  exploratory_analysis: "allowed_only_with_explicit_exploratory_label"
+
+integrity:
+  preregistration_sha256: null
+  locked_at_utc: null
+  locked_by: "[HUMAN OR CONTROLLED SERVICE ID]"

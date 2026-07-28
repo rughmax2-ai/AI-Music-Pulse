@@ -1,0 +1,151 @@
+schema_version: "1.0"
+experiment_id: "exp_YYYYMMDD_short_slug_e1"
+observation_id: "obs_short_slug"
+cycle_number: 1
+cycle_type: "existence"
+status: "draft"
+
+observation:
+  raw_text: "[INSERT THE UNEDITED OBSERVATION]"
+  operationalized_effect: "[ONE AUDIBLE OR MEASURABLE EFFECT]"
+  predicted_direction: "increase" # increase | decrease | two_sided
+
+scope:
+  provider: "suno"
+  model_version: "v5.5"
+  interface_mode: "[Custom mode / Studio / other exact surface]"
+  fields_under_test:
+    - "Style"
+  locale: "[ACCOUNT OR UI LOCALE IF RELEVANT]"
+
+applicable_confirmed_priors:
+  - id: "prior_field_separation"
+    reason: "The test preserves Style/Lyrics/Exclude roles."
+
+baseline:
+  style: "[FIXED BASELINE STYLE]"
+  lyrics: "[FIXED BASELINE LYRICS OR INSTRUMENTAL FLAG]"
+  exclude: "[FIXED BASELINE EXCLUSIONS]"
+  other_controls:
+    duration_target: "[IF CONTROLLED]"
+    source_audio: null
+
+ablation:
+  variable_name: "[EXACTLY ONE VARIABLE]"
+  invariant_fields:
+    - "lyrics"
+    - "exclude"
+    - "all non-tested settings"
+  exact_diff: "[LITERAL BEFORE -> AFTER DIFF]"
+
+conditions:
+  - code: "A"
+    blind_code: "LARK"
+    label: "control"
+    n_planned: 10
+    change: "none"
+  - code: "B"
+    blind_code: "MOSS"
+    label: "treatment"
+    n_planned: 10
+    change: "[ONE DECLARED CHANGE]"
+
+collection:
+  render_order_seed: "[PUBLIC RANDOMIZATION SEED CHOSEN BEFORE COLLECTION]"
+  render_order:
+    - "LARK"
+    - "MOSS"
+    - "MOSS"
+    - "LARK"
+    - "LARK"
+    - "MOSS"
+    - "LARK"
+    - "MOSS"
+    - "MOSS"
+    - "LARK"
+    - "MOSS"
+    - "LARK"
+    - "LARK"
+    - "MOSS"
+    - "MOSS"
+    - "LARK"
+    - "MOSS"
+    - "LARK"
+    - "LARK"
+    - "MOSS"
+  generation_window: "[PLANNED DATE/TIME WINDOW]"
+  version_drift_rule: "stop_and_mark_deviation"
+  artifact_policy: "private_audio_with_opaque_reference_and_sha256"
+
+human_rating:
+  rater_count: 1
+  blind: true
+  maximum_listen_seconds: 15
+  scale:
+    kill: 0
+    fine: 1
+    magic: 2
+  primary_endpoint: "mean_utility"
+  secondary_endpoints:
+    - "magic_rate"
+    - "kill_rate"
+  magic_verdict: "one_sentence_ear_language"
+  blinded_repeat_fraction: 0.10
+
+acoustic_measurement:
+  required: false
+  primary_metric: null
+  secondary_metrics: []
+  whisper:
+    version: "[PIN IF USED]"
+    auto_trim: true
+    parameters: {}
+  parselmouth:
+    version: "[PIN IF USED]"
+    parameters: {}
+  librosa:
+    version: "[PIN IF USED]"
+    parameters: {}
+  measurement_failure_rule: "retain_render_and_mark_metric_missing"
+
+effect_gate:
+  registered_statistic: "difference_in_mean_utility_B_minus_A"
+  minimum_practical_effect: 0.35
+  region_of_practical_equivalence:
+    lower: -0.35
+    upper: 0.35
+  uncertainty_method: "exact_permutation_plus_bootstrap_interval"
+  confidence_level: 0.80
+  effect_detected_rule: >
+    Observed difference is in the predicted direction, its absolute value is
+    at least the minimum practical effect, and the registered uncertainty
+    interval excludes zero in that direction.
+  practically_null_rule: >
+    The registered uncertainty interval lies entirely inside the region of
+    practical equivalence.
+  ambiguous_rule: "all other non-deviated outcomes"
+
+analysis:
+  population: "all valid renders generated under the locked protocol"
+  exclusions:
+    - reason: "audio file is unreadable or incomplete"
+      treatment: "exclude_and_report"
+    - reason: "displayed model version differs from registered scope"
+      treatment: "stop_and_mark_deviation"
+  missing_data: "do_not_impute"
+  multiple_testing: "only_the_registered_primary_endpoint_controls_classification"
+  exploratory_analysis: "allowed_only_with_explicit_exploratory_label"
+
+classification:
+  allowed:
+    - "effect_detected"
+    - "practically_null"
+    - "ambiguous"
+    - "deviated"
+    - "aborted"
+  mechanism_statement: "No mechanism hypothesis is being tested in this cycle."
+
+integrity:
+  preregistration_sha256: null
+  locked_at_utc: null
+  locked_by: "[HUMAN OR CONTROLLED SERVICE ID]"
