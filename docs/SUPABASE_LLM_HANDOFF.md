@@ -170,13 +170,12 @@ from the user:
   prove the mapping and seed real data before automation existed.
 - ✅ `scripts/sync_to_supabase.py` written — reads a day's
   `data/daily/YYYY-MM-DD.json` (today by default, or a date as argv[1]) and
-  upserts each post into `documents`, keyed on `source_url` via
-  `uniq_reddit_post_url` (safe to re-run). Uses `SUPABASE_URL` +
-  `SUPABASE_SERVICE_ROLE_KEY` env vars, PostgREST's REST API directly
-  (`Prefer: resolution=merge-duplicates`), stdlib-only like the original
-  fetch script. **Kept local JSON writing too** — `fetch_reddit.py` is
-  unchanged, this runs as an additional step, not a replacement. Whether to
-  eventually retire the JSON files is still open (§7).
+  upserts each post into `documents`, keyed on `source_url`. Uses
+  `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` env vars, PostgREST's REST
+  API directly (`Prefer: resolution=merge-duplicates`), stdlib-only like the
+  original fetch script. **Kept local JSON writing too** — `fetch_reddit.py`
+  is unchanged, this runs as an additional step, not a replacement. Whether
+  to eventually retire the JSON files is still open (§7).
 - ✅ `.github/workflows/daily-update.yml` updated — now runs
   `scripts/sync_to_supabase.py` right after the Reddit fetch, before the
   README digest step. It reads `${{ secrets.SUPABASE_URL }}` and
@@ -191,18 +190,43 @@ from the user:
   failure (missing secrets, network blip, whatever) can never again block
   the core digest. **Don't remove that flag** without a better reason than
   "it looks unnecessary" — it's there because of this exact incident.
-- ✅ `SUPABASE_SERVICE_ROLE_KEY` repo secret added by the user directly via
-  the GitHub UI (never passed through any chat/session). **Unconfirmed:**
-  whether `SUPABASE_URL` was also added as a secret — the user only
-  explicitly mentioned adding the service role key. Check
-  github.com/rughmax2-ai/AI-Music-Pulse/settings/secrets/actions for both
-  before assuming the sync will actually succeed.
-- ➖ A manual `workflow_dispatch` run was requested (to verify the sync
-  works end-to-end now that the secret's been added) but **not yet
-  confirmed complete** as of this handoff update. Check the Actions tab —
-  if it ran and `sync_to_supabase.py` succeeded, `documents` should have
-  today's posts too, not just the 2026-07-25 backfill. If it failed, check
-  whether `SUPABASE_URL` is actually set (see above).
+- ✅ Both `SUPABASE_SERVICE_ROLE_KEY` and `SUPABASE_URL` confirmed set as
+  repo secrets (neither passed through any chat/session) — the
+  2026-07-27 scheduled run (id `30282449024`) proves it: job step "Sync
+  posts to Supabase" ran and returned `conclusion: success` (checked via
+  the Actions API, not just assumed).
+- ✅✅ **Second incident, also fixed — this one was worse because it was
+  silent.** "Success" on that step was a lie: `documents` still had exactly
+  64 rows afterward (checked directly in Supabase), none from 2026-07-27.
+  Root cause, reproduced directly: `uniq_reddit_post_url` was a **partial**
+  unique index (`UNIQUE (source_url) WHERE source_type='reddit_post'`), and
+  a bare `ON CONFLICT (source_url)` — which is what PostgREST generates for
+  `on_conflict=source_url`, and what `sync_to_supabase.py` requests — cannot
+  use a partial index as its inference target unless the WHERE predicate is
+  repeated verbatim in the ON CONFLICT clause itself. Postgres actually
+  rejects this with `42P10: no unique or exclusion constraint matching the
+  ON CONFLICT specification` — reproduced this exact error directly via SQL
+  to confirm before fixing. Why the script exited 0 / the Actions step
+  showed `success` instead of surfacing that error is still unexplained (no
+  log access to confirm the exact mechanism) — **do not assume a `success`
+  conclusion on this step means rows were actually written; verify by
+  querying `documents` directly.**
+  Fix (migration `fix_reddit_post_conflict_target`): dropped the partial
+  index, replaced with `ALTER TABLE documents ADD CONSTRAINT
+  uniq_documents_source_url UNIQUE (source_url)` — a real constraint, usable
+  by bare `ON CONFLICT (source_url)`, and since NULLs are never considered
+  duplicates under a standard unique constraint, this is still safe for
+  document types without a `source_url` (e.g. the `knowledge_base` row).
+  Verified fixed via direct SQL (`ON CONFLICT (source_url) DO UPDATE`
+  succeeded post-fix), then manually backfilled 2026-07-27's 63 posts the
+  same way as the original 07-25 backfill, since the automated path had
+  silently written nothing for two days straight. `documents` now has both
+  2026-07-25 (64) and 2026-07-27 (63). **Not yet verified**: that
+  `sync_to_supabase.py` itself (the actual script, via the actual GitHub
+  Actions secrets) succeeds end-to-end against the fixed constraint — only
+  the SQL-level fix has been confirmed. The next scheduled run (or a manual
+  `workflow_dispatch`) is the real test; check `documents` afterward, don't
+  trust the step's green checkmark alone given what just happened.
 - ✅ Confirmed via `pg_policies`: **zero RLS policies exist on any table.**
   With RLS enabled and no policies, the anon/publishable key currently has
   no read or write access to anything — which is fine (nothing needs it
