@@ -131,6 +131,12 @@ python scripts/fetch_reddit.py    # writes data/daily/YYYY-MM-DD.json
 python scripts/update_readme.py   # refreshes the digest in this README
 ```
 
+## Experimental Prompt Research
+
+The [`Hypothesis Engine`](hypothesis-engine/) turns observations about Suno v5/v5.5 prompt behavior into SHA-256-locked experiments, blinded render evidence, and human-approved RAG claims. It keeps anecdotes, preregistered effects, surviving mechanisms, contradictions, and retired model-version findings explicitly separated from the daily community-ingestion pipeline.
+
+See [`hypothesis-engine/README.md`](hypothesis-engine/README.md).
+
 ## Roadmap
 
 - [ ] Discord server digests (requires a bot token; planned as a second
@@ -138,6 +144,8 @@ python scripts/update_readme.py   # refreshes the digest in this README
 - [ ] Weekly trend rollups (top keywords, score deltas across days)
 - [ ] Hacker News and YouTube sources
 - [ ] Static site rendering of the archive via GitHub Pages
+- [ ] Apply Hypothesis Engine Supabase migration (branch/test project first)
+- [ ] First real existence test without claim promotion
 
 ## License
 
