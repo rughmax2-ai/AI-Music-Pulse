@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-07-27
+### Daily Digest — 2026-07-28
 
-**63 posts** archived from 4 subreddits
+**62 posts** archived from 5 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [This is how AI music wins](https://www.reddit.com/r/SunoAI/comments/1v7fux9/this_is_how_ai_music_wins/) | r/SunoAI | – | – |
-| 2 | [Wrote an article going a little in depth what's going on when you hit the generate button.](https://www.reddit.com/r/SunoAI/comments/1v7i9mv/wrote_an_article_going_a_little_in_depth_whats/) | r/SunoAI | – | – |
-| 3 | [New AI song promotion post](https://www.reddit.com/r/SunoAI/comments/1v7oy8z/new_ai_song_promotion_post/) | r/SunoAI | – | – |
-| 4 | [I decided to wait a few years before distributing my music](https://www.reddit.com/r/SunoAI/comments/1v7d9cz/i_decided_to_wait_a_few_years_before_distributing/) | r/SunoAI | – | – |
-| 5 | [Why So Much Hate Towards AI Music?](https://www.reddit.com/r/SunoAI/comments/1v7nkyf/why_so_much_hate_towards_ai_music/) | r/SunoAI | – | – |
-| 6 | [Unsolicited tip: Want to take tracks to the next level write your lyrics. Ai is shit at wr](https://www.reddit.com/r/SunoAI/comments/1v7ppk5/unsolicited_tip_want_to_take_tracks_to_the_next/) | r/SunoAI | – | – |
-| 7 | [Suddenly got banned for the Sino Discord](https://www.reddit.com/r/SunoAI/comments/1v7h3ng/suddenly_got_banned_for_the_sino_discord/) | r/SunoAI | – | – |
-| 8 | [\[Warm Melancholic Indietronica\] Black Cat White Cat](https://www.reddit.com/r/SunoAI/comments/1v7gye5/warm_melancholic_indietronica_black_cat_white_cat/) | r/SunoAI | – | – |
-| 9 | [Hi community. What styles do you write in, and which ones are your favorites—the ones that](https://www.reddit.com/r/SunoAI/comments/1v7y198/hi_community_what_styles_do_you_write_in_and/) | r/SunoAI | – | – |
-| 10 | [Copyrighted material from 1529](https://www.reddit.com/r/SunoAI/comments/1v7mekj/copyrighted_material_from_1529/) | r/SunoAI | – | – |
+| 1 | [Listener (pt. 3)](https://www.reddit.com/r/SunoAI/comments/1v8pzpw/listener_pt_3/) | r/SunoAI | – | – |
+| 2 | [Avoid vocal intro and wordless vocal](https://www.reddit.com/r/SunoAI/comments/1v8az9p/avoid_vocal_intro_and_wordless_vocal/) | r/SunoAI | – | – |
+| 3 | [Is 13,457 a lot ? Does anyone else upload their Freestyles Raps to Suno? I’d love to hear ](https://www.reddit.com/r/SunoAI/comments/1v8g1kn/is_13457_a_lot_does_anyone_else_upload_their/) | r/SunoAI | – | – |
+| 4 | [Can AI music help us make sense of what is happening in the world?](https://www.reddit.com/r/SunoAI/comments/1v8tu7v/can_ai_music_help_us_make_sense_of_what_is/) | r/SunoAI | – | – |
+| 5 | [Anyone create a Suno song then remade it as a human cover?](https://www.reddit.com/r/SunoAI/comments/1v8nqfq/anyone_create_a_suno_song_then_remade_it_as_a/) | r/SunoAI | – | – |
+| 6 | [are ai musicians actually making money? i went through the ones that charted or got signed](https://www.reddit.com/r/SunoAI/comments/1v8ttlp/are_ai_musicians_actually_making_money_i_went/) | r/SunoAI | – | – |
+| 7 | [\[Medieval/Nordic/Ambience\] The Blackthorn Wood - Dark Medieval Nordic Music & Winter For](https://www.reddit.com/r/SunoAI/comments/1v86ryc/medievalnordicambience_the_blackthorn_wood_dark/) | r/SunoAI | – | – |
+| 8 | [Suno V5.5 is only for polish; 4.5 and 5 do the heavy lifting.](https://www.reddit.com/r/SunoAI/comments/1v8uyk6/suno_v55_is_only_for_polish_45_and_5_do_the_heavy/) | r/SunoAI | – | – |
+| 9 | [I wish Suno had proper “Top Charts” for discovering genuinely great AI songs](https://www.reddit.com/r/SunoAI/comments/1v8thfa/i_wish_suno_had_proper_top_charts_for_discovering/) | r/SunoAI | – | – |
+| 10 | [Suno v6 Feature Request](https://www.reddit.com/r/SunoAI/comments/1v8h5rq/suno_v6_feature_request/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-07-27.json`](data/daily/2026-07-27.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-07-28.json`](data/daily/2026-07-28.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-07-27 16:03 UTC_
+_Last updated: 2026-07-28 12:33 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
