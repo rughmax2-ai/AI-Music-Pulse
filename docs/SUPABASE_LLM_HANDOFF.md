@@ -181,29 +181,50 @@ from the user:
   `scripts/sync_to_supabase.py` right after the Reddit fetch, before the
   README digest step. It reads `${{ secrets.SUPABASE_URL }}` and
   `${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}`.
+- ✅ **Incident, fixed:** the 2026-07-26 scheduled run failed outright — no
+  digest commit that day at all. Cause: the Supabase sync step had no
+  `continue-on-error`, the two secrets didn't exist yet, so
+  `sync_to_supabase.py` exited 1 and killed the whole job before the README
+  digest / commit steps ever ran. That's a regression the sync step
+  introduced into a pipeline that had been reliable. Fixed in commit
+  `95848e1`: the sync step now has `continue-on-error: true`, so a Supabase
+  failure (missing secrets, network blip, whatever) can never again block
+  the core digest. **Don't remove that flag** without a better reason than
+  "it looks unnecessary" — it's there because of this exact incident.
+- ✅ `SUPABASE_SERVICE_ROLE_KEY` repo secret added by the user directly via
+  the GitHub UI (never passed through any chat/session). **Unconfirmed:**
+  whether `SUPABASE_URL` was also added as a secret — the user only
+  explicitly mentioned adding the service role key. Check
+  github.com/rughmax2-ai/AI-Music-Pulse/settings/secrets/actions for both
+  before assuming the sync will actually succeed.
+- ➖ A manual `workflow_dispatch` run was requested (to verify the sync
+  works end-to-end now that the secret's been added) but **not yet
+  confirmed complete** as of this handoff update. Check the Actions tab —
+  if it ran and `sync_to_supabase.py` succeeded, `documents` should have
+  today's posts too, not just the 2026-07-25 backfill. If it failed, check
+  whether `SUPABASE_URL` is actually set (see above).
+- ✅ Confirmed via `pg_policies`: **zero RLS policies exist on any table.**
+  With RLS enabled and no policies, the anon/publishable key currently has
+  no read or write access to anything — which is fine (nothing needs it
+  yet) but matters the moment anyone builds a public-facing dashboard: a
+  `SELECT`-only policy will need to be added at that point, scoped to
+  whatever's safe to expose. Don't assume the anon key can read `documents`
+  or `chunks` today — it can't.
 
 **Still blocked / not done:**
 
-1. **The GitHub Actions secrets aren't set yet.** `SUPABASE_URL` (safe:
-   `https://xocrwemfdxhuefdzolxv.supabase.co`) and
-   `SUPABASE_SERVICE_ROLE_KEY` (get from the Supabase dashboard, Settings →
-   API — not retrievable via MCP, see §4) need to be added at
-   github.com/rughmax2-ai/AI-Music-Pulse/settings/secrets/actions before the
-   next scheduled run, or `sync_to_supabase.py` will fail with a clear
-   "must be set" error and the whole workflow run will fail (fetch still
-   succeeds and commits first — only the Supabase sync step fails).
-2. Resolve §5 (LM Studio host/port) with the user — as of this handoff,
+1. Resolve §5 (LM Studio host/port) with the user — as of this handoff,
    still unresolved; user is moving to the laptop that actually has it.
-3. Write `scripts/summarize_context.py` — queries `documents` for
+2. Write `scripts/summarize_context.py` — queries `documents` for
    `source_type='reddit_post'` rows from the current fetch day, calls LM
    Studio's chat completions endpoint, and for each genuinely useful nugget
    either inserts a new `chunks` row (with a `category` from the taxonomy in
    §4) or marks an existing chunk `superseded` and inserts the replacement.
    The "is this actually new" check itself still needs to be designed — not
    just "call the LLM and store whatever it says."
-4. Install `summarize_context.py` as a cron (crontab or systemd timer, per
+3. Install `summarize_context.py` as a cron (crontab or systemd timer, per
    what §5 decides) on the LM Studio machine.
-5. Test both crons manually end-to-end before trusting the schedule.
+4. Test both crons manually end-to-end before trusting the schedule.
 
 ## 7. Things NOT decided yet — don't assume
 
