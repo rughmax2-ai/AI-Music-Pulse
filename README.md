@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-07-28
+### Daily Digest — 2026-07-29
 
-**62 posts** archived from 5 subreddits
+**62 posts** archived from 4 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [Listener (pt. 3)](https://www.reddit.com/r/SunoAI/comments/1v8pzpw/listener_pt_3/) | r/SunoAI | – | – |
-| 2 | [Avoid vocal intro and wordless vocal](https://www.reddit.com/r/SunoAI/comments/1v8az9p/avoid_vocal_intro_and_wordless_vocal/) | r/SunoAI | – | – |
-| 3 | [Is 13,457 a lot ? Does anyone else upload their Freestyles Raps to Suno? I’d love to hear ](https://www.reddit.com/r/SunoAI/comments/1v8g1kn/is_13457_a_lot_does_anyone_else_upload_their/) | r/SunoAI | – | – |
-| 4 | [Can AI music help us make sense of what is happening in the world?](https://www.reddit.com/r/SunoAI/comments/1v8tu7v/can_ai_music_help_us_make_sense_of_what_is/) | r/SunoAI | – | – |
-| 5 | [Anyone create a Suno song then remade it as a human cover?](https://www.reddit.com/r/SunoAI/comments/1v8nqfq/anyone_create_a_suno_song_then_remade_it_as_a/) | r/SunoAI | – | – |
-| 6 | [are ai musicians actually making money? i went through the ones that charted or got signed](https://www.reddit.com/r/SunoAI/comments/1v8ttlp/are_ai_musicians_actually_making_money_i_went/) | r/SunoAI | – | – |
-| 7 | [\[Medieval/Nordic/Ambience\] The Blackthorn Wood - Dark Medieval Nordic Music & Winter For](https://www.reddit.com/r/SunoAI/comments/1v86ryc/medievalnordicambience_the_blackthorn_wood_dark/) | r/SunoAI | – | – |
-| 8 | [Suno V5.5 is only for polish; 4.5 and 5 do the heavy lifting.](https://www.reddit.com/r/SunoAI/comments/1v8uyk6/suno_v55_is_only_for_polish_45_and_5_do_the_heavy/) | r/SunoAI | – | – |
-| 9 | [I wish Suno had proper “Top Charts” for discovering genuinely great AI songs](https://www.reddit.com/r/SunoAI/comments/1v8thfa/i_wish_suno_had_proper_top_charts_for_discovering/) | r/SunoAI | – | – |
-| 10 | [Suno v6 Feature Request](https://www.reddit.com/r/SunoAI/comments/1v8h5rq/suno_v6_feature_request/) | r/SunoAI | – | – |
+| 1 | [My content generated a combined total of $10,800 in June. AMA](https://www.reddit.com/r/SunoAI/comments/1v992ge/my_content_generated_a_combined_total_of_10800_in/) | r/SunoAI | – | – |
+| 2 | [Voices feature not available for 4.5+ anymore ?!](https://www.reddit.com/r/SunoAI/comments/1v9lbx4/voices_feature_not_available_for_45_anymore/) | r/SunoAI | – | – |
+| 3 | [New AI song promotion post](https://www.reddit.com/r/SunoAI/comments/1v9hrfe/new_ai_song_promotion_post/) | r/SunoAI | – | – |
+| 4 | [Frustrated sometimes](https://www.reddit.com/r/SunoAI/comments/1v9gifs/frustrated_sometimes/) | r/SunoAI | – | – |
+| 5 | [What are the things you try to do, but Suno never gets right?](https://www.reddit.com/r/SunoAI/comments/1v9bqba/what_are_the_things_you_try_to_do_but_suno_never/) | r/SunoAI | – | – |
+| 6 | [🎵 Let's Share our best AI Songs, and actually listen to each other](https://www.reddit.com/r/SunoAI/comments/1v9prqj/lets_share_our_best_ai_songs_and_actually_listen/) | r/SunoAI | – | – |
+| 7 | [We started an AI-assisted post-hardcore project from nothing and reached 4,500 monthly lis](https://www.reddit.com/r/SunoAI/comments/1v9r8jv/we_started_an_aiassisted_posthardcore_project/) | r/SunoAI | – | – |
+| 8 | [I'm a bassist, but piano seeds steer Suno better than anything I do with prompts — 10 trac](https://www.reddit.com/r/SunoAI/comments/1v9c132/im_a_bassist_but_piano_seeds_steer_suno_better/) | r/SunoAI | – | – |
+| 9 | [All the things that go unsaid](https://www.reddit.com/r/SunoAI/comments/1v91ngt/all_the_things_that_go_unsaid/) | r/SunoAI | – | – |
+| 10 | [\[Cinematic Breakbeat\] The Unfinished Duel](https://www.reddit.com/r/SunoAI/comments/1v900ox/cinematic_breakbeat_the_unfinished_duel/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-07-28.json`](data/daily/2026-07-28.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-07-29.json`](data/daily/2026-07-29.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-07-28 12:33 UTC_
+_Last updated: 2026-07-29 13:17 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
