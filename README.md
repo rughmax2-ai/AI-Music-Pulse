@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-07-29
+### Daily Digest — 2026-07-30
 
-**62 posts** archived from 4 subreddits
+**57 posts** archived from 5 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [My content generated a combined total of $10,800 in June. AMA](https://www.reddit.com/r/SunoAI/comments/1v992ge/my_content_generated_a_combined_total_of_10800_in/) | r/SunoAI | – | – |
-| 2 | [Voices feature not available for 4.5+ anymore ?!](https://www.reddit.com/r/SunoAI/comments/1v9lbx4/voices_feature_not_available_for_45_anymore/) | r/SunoAI | – | – |
-| 3 | [New AI song promotion post](https://www.reddit.com/r/SunoAI/comments/1v9hrfe/new_ai_song_promotion_post/) | r/SunoAI | – | – |
-| 4 | [Frustrated sometimes](https://www.reddit.com/r/SunoAI/comments/1v9gifs/frustrated_sometimes/) | r/SunoAI | – | – |
-| 5 | [What are the things you try to do, but Suno never gets right?](https://www.reddit.com/r/SunoAI/comments/1v9bqba/what_are_the_things_you_try_to_do_but_suno_never/) | r/SunoAI | – | – |
-| 6 | [🎵 Let's Share our best AI Songs, and actually listen to each other](https://www.reddit.com/r/SunoAI/comments/1v9prqj/lets_share_our_best_ai_songs_and_actually_listen/) | r/SunoAI | – | – |
-| 7 | [We started an AI-assisted post-hardcore project from nothing and reached 4,500 monthly lis](https://www.reddit.com/r/SunoAI/comments/1v9r8jv/we_started_an_aiassisted_posthardcore_project/) | r/SunoAI | – | – |
-| 8 | [I'm a bassist, but piano seeds steer Suno better than anything I do with prompts — 10 trac](https://www.reddit.com/r/SunoAI/comments/1v9c132/im_a_bassist_but_piano_seeds_steer_suno_better/) | r/SunoAI | – | – |
-| 9 | [All the things that go unsaid](https://www.reddit.com/r/SunoAI/comments/1v91ngt/all_the_things_that_go_unsaid/) | r/SunoAI | – | – |
-| 10 | [\[Cinematic Breakbeat\] The Unfinished Duel](https://www.reddit.com/r/SunoAI/comments/1v900ox/cinematic_breakbeat_the_unfinished_duel/) | r/SunoAI | – | – |
+| 1 | [Could AI Transparency Be More Specific?](https://www.reddit.com/r/SunoAI/comments/1vait26/could_ai_transparency_be_more_specific/) | r/SunoAI | – | – |
+| 2 | [An idea i had to help artists at least on youtube](https://www.reddit.com/r/SunoAI/comments/1vajsku/an_idea_i_had_to_help_artists_at_least_on_youtube/) | r/SunoAI | – | – |
+| 3 | [If AI music becomes harder to monetize on YouTube, what alternative ecosystem should we be](https://www.reddit.com/r/SunoAI/comments/1vai8ea/if_ai_music_becomes_harder_to_monetize_on_youtube/) | r/SunoAI | – | – |
+| 4 | [Suno to Musiversal?](https://www.reddit.com/r/SunoAI/comments/1va1ndv/suno_to_musiversal/) | r/SunoAI | – | – |
+| 5 | [Suno makes me verify I'm human](https://www.reddit.com/r/SunoAI/comments/1va17cr/suno_makes_me_verify_im_human/) | r/SunoAI | – | – |
+| 6 | [Suno Down... I just hit create...](https://www.reddit.com/r/SunoAI/comments/1vagkxl/suno_down_i_just_hit_create/) | r/SunoAI | – | – |
+| 7 | [I just created a whole website for my songs](https://www.reddit.com/r/SunoAI/comments/1vak6rb/i_just_created_a_whole_website_for_my_songs/) | r/SunoAI | – | – |
+| 8 | [\[Eletronic-Pop\] Morning Light](https://www.reddit.com/r/SunoAI/comments/1vag1mv/eletronicpop_morning_light/) | r/SunoAI | – | – |
+| 9 | [Having a weird quality issue...](https://www.reddit.com/r/SunoAI/comments/1vafuou/having_a_weird_quality_issue/) | r/SunoAI | – | – |
+| 10 | [Any of yall making dungeon synth or black metal?](https://www.reddit.com/r/SunoAI/comments/1vabmp3/any_of_yall_making_dungeon_synth_or_black_metal/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-07-29.json`](data/daily/2026-07-29.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-07-30.json`](data/daily/2026-07-30.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-07-29 13:17 UTC_
+_Last updated: 2026-07-30 12:20 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
