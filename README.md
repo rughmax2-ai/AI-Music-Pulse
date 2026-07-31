@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-07-30
+### Daily Digest — 2026-07-31
 
-**57 posts** archived from 5 subreddits
+**60 posts** archived from 4 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [Could AI Transparency Be More Specific?](https://www.reddit.com/r/SunoAI/comments/1vait26/could_ai_transparency_be_more_specific/) | r/SunoAI | – | – |
-| 2 | [An idea i had to help artists at least on youtube](https://www.reddit.com/r/SunoAI/comments/1vajsku/an_idea_i_had_to_help_artists_at_least_on_youtube/) | r/SunoAI | – | – |
-| 3 | [If AI music becomes harder to monetize on YouTube, what alternative ecosystem should we be](https://www.reddit.com/r/SunoAI/comments/1vai8ea/if_ai_music_becomes_harder_to_monetize_on_youtube/) | r/SunoAI | – | – |
-| 4 | [Suno to Musiversal?](https://www.reddit.com/r/SunoAI/comments/1va1ndv/suno_to_musiversal/) | r/SunoAI | – | – |
-| 5 | [Suno makes me verify I'm human](https://www.reddit.com/r/SunoAI/comments/1va17cr/suno_makes_me_verify_im_human/) | r/SunoAI | – | – |
-| 6 | [Suno Down... I just hit create...](https://www.reddit.com/r/SunoAI/comments/1vagkxl/suno_down_i_just_hit_create/) | r/SunoAI | – | – |
-| 7 | [I just created a whole website for my songs](https://www.reddit.com/r/SunoAI/comments/1vak6rb/i_just_created_a_whole_website_for_my_songs/) | r/SunoAI | – | – |
-| 8 | [\[Eletronic-Pop\] Morning Light](https://www.reddit.com/r/SunoAI/comments/1vag1mv/eletronicpop_morning_light/) | r/SunoAI | – | – |
-| 9 | [Having a weird quality issue...](https://www.reddit.com/r/SunoAI/comments/1vafuou/having_a_weird_quality_issue/) | r/SunoAI | – | – |
-| 10 | [Any of yall making dungeon synth or black metal?](https://www.reddit.com/r/SunoAI/comments/1vabmp3/any_of_yall_making_dungeon_synth_or_black_metal/) | r/SunoAI | – | – |
+| 1 | [one of my Suno tracks blew up on Pandora and got pulled, now pandora and distrokid are jus](https://www.reddit.com/r/SunoAI/comments/1vbgqmj/one_of_my_suno_tracks_blew_up_on_pandora_and_got/) | r/SunoAI | – | – |
+| 2 | [If a Human Band Recorded a Completely AI-Generated Song, Would It Still Be “Just AI”?](https://www.reddit.com/r/SunoAI/comments/1vbcnp1/if_a_human_band_recorded_a_completely_aigenerated/) | r/SunoAI | – | – |
+| 3 | [My two cents](https://www.reddit.com/r/SunoAI/comments/1vbdjsy/my_two_cents/) | r/SunoAI | – | – |
+| 4 | [Wrote a song and suno’s random ai cover generator gave me this really cool cover](https://www.reddit.com/r/SunoAI/comments/1vbcxx4/wrote_a_song_and_sunos_random_ai_cover_generator/) | r/SunoAI | – | – |
+| 5 | ["Create Custom Model"](https://www.reddit.com/r/SunoAI/comments/1vavdz9/create_custom_model/) | r/SunoAI | – | – |
+| 6 | [A song so good one actually wants to produce it irl and sing it themselves](https://www.reddit.com/r/SunoAI/comments/1vbj1ye/a_song_so_good_one_actually_wants_to_produce_it/) | r/SunoAI | – | – |
+| 7 | [Removing Section of Song and struggling](https://www.reddit.com/r/SunoAI/comments/1vax6op/removing_section_of_song_and_struggling/) | r/SunoAI | – | – |
+| 8 | [Christian Rich Presents Human Sounds x Suno Remix Contest](https://www.reddit.com/r/SunoAI/comments/1vb255r/christian_rich_presents_human_sounds_x_suno_remix/) | r/SunoAI | – | – |
+| 9 | [\[Alt Metalcore\] Sanctuary by AIJI 哀機](https://www.reddit.com/r/SunoAI/comments/1vbo6tt/alt_metalcore_sanctuary_by_aiji_哀機/) | r/SunoAI | – | – |
+| 10 | [In the future when Sino gets REALLY good....](https://www.reddit.com/r/SunoAI/comments/1vbhi5k/in_the_future_when_sino_gets_really_good/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-07-30.json`](data/daily/2026-07-30.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-07-31.json`](data/daily/2026-07-31.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-07-30 12:20 UTC_
+_Last updated: 2026-07-31 13:15 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
