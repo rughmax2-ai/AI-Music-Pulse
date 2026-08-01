@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-07-31
+### Daily Digest — 2026-08-01
 
-**60 posts** archived from 4 subreddits
+**60 posts** archived from 3 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [one of my Suno tracks blew up on Pandora and got pulled, now pandora and distrokid are jus](https://www.reddit.com/r/SunoAI/comments/1vbgqmj/one_of_my_suno_tracks_blew_up_on_pandora_and_got/) | r/SunoAI | – | – |
-| 2 | [If a Human Band Recorded a Completely AI-Generated Song, Would It Still Be “Just AI”?](https://www.reddit.com/r/SunoAI/comments/1vbcnp1/if_a_human_band_recorded_a_completely_aigenerated/) | r/SunoAI | – | – |
-| 3 | [My two cents](https://www.reddit.com/r/SunoAI/comments/1vbdjsy/my_two_cents/) | r/SunoAI | – | – |
-| 4 | [Wrote a song and suno’s random ai cover generator gave me this really cool cover](https://www.reddit.com/r/SunoAI/comments/1vbcxx4/wrote_a_song_and_sunos_random_ai_cover_generator/) | r/SunoAI | – | – |
-| 5 | ["Create Custom Model"](https://www.reddit.com/r/SunoAI/comments/1vavdz9/create_custom_model/) | r/SunoAI | – | – |
-| 6 | [A song so good one actually wants to produce it irl and sing it themselves](https://www.reddit.com/r/SunoAI/comments/1vbj1ye/a_song_so_good_one_actually_wants_to_produce_it/) | r/SunoAI | – | – |
-| 7 | [Removing Section of Song and struggling](https://www.reddit.com/r/SunoAI/comments/1vax6op/removing_section_of_song_and_struggling/) | r/SunoAI | – | – |
-| 8 | [Christian Rich Presents Human Sounds x Suno Remix Contest](https://www.reddit.com/r/SunoAI/comments/1vb255r/christian_rich_presents_human_sounds_x_suno_remix/) | r/SunoAI | – | – |
-| 9 | [\[Alt Metalcore\] Sanctuary by AIJI 哀機](https://www.reddit.com/r/SunoAI/comments/1vbo6tt/alt_metalcore_sanctuary_by_aiji_哀機/) | r/SunoAI | – | – |
-| 10 | [In the future when Sino gets REALLY good....](https://www.reddit.com/r/SunoAI/comments/1vbhi5k/in_the_future_when_sino_gets_really_good/) | r/SunoAI | – | – |
+| 1 | [New AI song promotion post](https://www.reddit.com/r/SunoAI/comments/1vc28f9/new_ai_song_promotion_post/) | r/SunoAI | – | – |
+| 2 | [There’s Strength in Numbers & Major Record Companies Can’t Control Us!!!!](https://www.reddit.com/r/SunoAI/comments/1vbz2fl/theres_strength_in_numbers_major_record_companies/) | r/SunoAI | – | – |
+| 3 | [IS THERE ANY OTHER ALTERNATIVE TO SUNO?](https://www.reddit.com/r/SunoAI/comments/1vcfbp4/is_there_any_other_alternative_to_suno/) | r/SunoAI | – | – |
+| 4 | [German Court Rules Against Suno In Lawsuit Challenging Use Of Copyrighted Music In AI](https://www.reddit.com/r/SunoAI/comments/1vbxblz/german_court_rules_against_suno_in_lawsuit/) | r/SunoAI | – | – |
+| 5 | [Six months of taking YouTube seriously, but almost no subscriber growth. What is actually ](https://www.reddit.com/r/SunoAI/comments/1vbp1kn/six_months_of_taking_youtube_seriously_but_almost/) | r/SunoAI | – | – |
+| 6 | [Lyria 3.5 on Google Flow Music](https://www.reddit.com/r/SunoAI/comments/1vc9b1o/lyria_35_on_google_flow_music/) | r/SunoAI | – | – |
+| 7 | [Spotify Playlists for Suno Artists (pt. 2)](https://www.reddit.com/r/SunoAI/comments/1vby7d5/spotify_playlists_for_suno_artists_pt_2/) | r/SunoAI | – | – |
+| 8 | [\[POP ROCK\] SIRU: Dragon of the Universe (DAVIOS) DAVIOS MICHEL](https://www.reddit.com/r/SunoAI/comments/1vbyn6g/pop_rock_siru_dragon_of_the_universe_davios/) | r/SunoAI | – | – |
+| 9 | [\[Dance / POP\] "Just Dumb" by mainframesysop](https://www.reddit.com/r/SunoAI/comments/1vbwb3i/dance_pop_just_dumb_by_mainframesysop/) | r/SunoAI | – | – |
+| 10 | [\[Hip-Hop\] Cheap Dopamine by Chad MemeStrong](https://www.reddit.com/r/SunoAI/comments/1vbvn7y/hiphop_cheap_dopamine_by_chad_memestrong/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-07-31.json`](data/daily/2026-07-31.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-08-01.json`](data/daily/2026-08-01.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-07-31 13:15 UTC_
+_Last updated: 2026-08-01 11:12 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
