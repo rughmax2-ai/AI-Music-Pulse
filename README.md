@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-08-01
+### Daily Digest — 2026-08-02
 
-**60 posts** archived from 3 subreddits
+**64 posts** archived from 4 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [New AI song promotion post](https://www.reddit.com/r/SunoAI/comments/1vc28f9/new_ai_song_promotion_post/) | r/SunoAI | – | – |
-| 2 | [There’s Strength in Numbers & Major Record Companies Can’t Control Us!!!!](https://www.reddit.com/r/SunoAI/comments/1vbz2fl/theres_strength_in_numbers_major_record_companies/) | r/SunoAI | – | – |
-| 3 | [IS THERE ANY OTHER ALTERNATIVE TO SUNO?](https://www.reddit.com/r/SunoAI/comments/1vcfbp4/is_there_any_other_alternative_to_suno/) | r/SunoAI | – | – |
-| 4 | [German Court Rules Against Suno In Lawsuit Challenging Use Of Copyrighted Music In AI](https://www.reddit.com/r/SunoAI/comments/1vbxblz/german_court_rules_against_suno_in_lawsuit/) | r/SunoAI | – | – |
-| 5 | [Six months of taking YouTube seriously, but almost no subscriber growth. What is actually ](https://www.reddit.com/r/SunoAI/comments/1vbp1kn/six_months_of_taking_youtube_seriously_but_almost/) | r/SunoAI | – | – |
-| 6 | [Lyria 3.5 on Google Flow Music](https://www.reddit.com/r/SunoAI/comments/1vc9b1o/lyria_35_on_google_flow_music/) | r/SunoAI | – | – |
-| 7 | [Spotify Playlists for Suno Artists (pt. 2)](https://www.reddit.com/r/SunoAI/comments/1vby7d5/spotify_playlists_for_suno_artists_pt_2/) | r/SunoAI | – | – |
-| 8 | [\[POP ROCK\] SIRU: Dragon of the Universe (DAVIOS) DAVIOS MICHEL](https://www.reddit.com/r/SunoAI/comments/1vbyn6g/pop_rock_siru_dragon_of_the_universe_davios/) | r/SunoAI | – | – |
-| 9 | [\[Dance / POP\] "Just Dumb" by mainframesysop](https://www.reddit.com/r/SunoAI/comments/1vbwb3i/dance_pop_just_dumb_by_mainframesysop/) | r/SunoAI | – | – |
-| 10 | [\[Hip-Hop\] Cheap Dopamine by Chad MemeStrong](https://www.reddit.com/r/SunoAI/comments/1vbvn7y/hiphop_cheap_dopamine_by_chad_memestrong/) | r/SunoAI | – | – |
+| 1 | [FIRST EARNING FROM MY AI MUSIC AFTER 3 MONTHS & 74 SONGS RELEASED](https://www.reddit.com/r/SunoAI/comments/1vcrezv/first_earning_from_my_ai_music_after_3_months_74/) | r/SunoAI | – | – |
+| 2 | [New AI song promotion post](https://www.reddit.com/r/SunoAI/comments/1vcr3nq/new_ai_song_promotion_post/) | r/SunoAI | – | – |
+| 3 | [YOUR VOICE IS THE BEST PROMPT!!!](https://www.reddit.com/r/SunoAI/comments/1vcq1hv/your_voice_is_the_best_prompt/) | r/SunoAI | – | – |
+| 4 | [Do you guys think suno is being nerfed?](https://www.reddit.com/r/SunoAI/comments/1vclhgj/do_you_guys_think_suno_is_being_nerfed/) | r/SunoAI | – | – |
+| 5 | [August 2026 Song Feedback Megathread - Leave a review, get a review!](https://www.reddit.com/r/SunoAI/comments/1vcpnch/august_2026_song_feedback_megathread_leave_a/) | r/SunoAI | – | – |
+| 6 | [I dream of changing pop music](https://www.reddit.com/r/SunoAI/comments/1vd3d8t/i_dream_of_changing_pop_music/) | r/SunoAI | – | – |
+| 7 | [Between "Guaranteed Human" and 74 Songs in Three Months](https://www.reddit.com/r/SunoAI/comments/1vd56wk/between_guaranteed_human_and_74_songs_in_three/) | r/SunoAI | – | – |
+| 8 | [Silly Question: Does SUNO have canned Sound FX like "Footsteps" or "Thunder" (etc.)](https://www.reddit.com/r/SunoAI/comments/1vcx59u/silly_question_does_suno_have_canned_sound_fx/) | r/SunoAI | – | – |
+| 9 | [Suno constantly not listening.](https://www.reddit.com/r/SunoAI/comments/1vclk2c/suno_constantly_not_listening/) | r/SunoAI | – | – |
+| 10 | [New to suno](https://www.reddit.com/r/SunoAI/comments/1vcirvv/new_to_suno/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-08-01.json`](data/daily/2026-08-01.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-08-02.json`](data/daily/2026-08-02.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-08-01 11:12 UTC_
+_Last updated: 2026-08-02 08:43 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
