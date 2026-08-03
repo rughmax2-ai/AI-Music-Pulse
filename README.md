@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-08-02
+### Daily Digest — 2026-08-03
 
-**64 posts** archived from 4 subreddits
+**56 posts** archived from 3 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [FIRST EARNING FROM MY AI MUSIC AFTER 3 MONTHS & 74 SONGS RELEASED](https://www.reddit.com/r/SunoAI/comments/1vcrezv/first_earning_from_my_ai_music_after_3_months_74/) | r/SunoAI | – | – |
-| 2 | [New AI song promotion post](https://www.reddit.com/r/SunoAI/comments/1vcr3nq/new_ai_song_promotion_post/) | r/SunoAI | – | – |
-| 3 | [YOUR VOICE IS THE BEST PROMPT!!!](https://www.reddit.com/r/SunoAI/comments/1vcq1hv/your_voice_is_the_best_prompt/) | r/SunoAI | – | – |
-| 4 | [Do you guys think suno is being nerfed?](https://www.reddit.com/r/SunoAI/comments/1vclhgj/do_you_guys_think_suno_is_being_nerfed/) | r/SunoAI | – | – |
-| 5 | [August 2026 Song Feedback Megathread - Leave a review, get a review!](https://www.reddit.com/r/SunoAI/comments/1vcpnch/august_2026_song_feedback_megathread_leave_a/) | r/SunoAI | – | – |
-| 6 | [I dream of changing pop music](https://www.reddit.com/r/SunoAI/comments/1vd3d8t/i_dream_of_changing_pop_music/) | r/SunoAI | – | – |
-| 7 | [Between "Guaranteed Human" and 74 Songs in Three Months](https://www.reddit.com/r/SunoAI/comments/1vd56wk/between_guaranteed_human_and_74_songs_in_three/) | r/SunoAI | – | – |
-| 8 | [Silly Question: Does SUNO have canned Sound FX like "Footsteps" or "Thunder" (etc.)](https://www.reddit.com/r/SunoAI/comments/1vcx59u/silly_question_does_suno_have_canned_sound_fx/) | r/SunoAI | – | – |
-| 9 | [Suno constantly not listening.](https://www.reddit.com/r/SunoAI/comments/1vclk2c/suno_constantly_not_listening/) | r/SunoAI | – | – |
-| 10 | [New to suno](https://www.reddit.com/r/SunoAI/comments/1vcirvv/new_to_suno/) | r/SunoAI | – | – |
+| 1 | [AI music isn’t the problem. AI slop is.](https://www.reddit.com/r/SunoAI/comments/1vdeh76/ai_music_isnt_the_problem_ai_slop_is/) | r/SunoAI | – | – |
+| 2 | [Drop Your Spotify Songs](https://www.reddit.com/r/SunoAI/comments/1vdi8bx/drop_your_spotify_songs/) | r/SunoAI | – | – |
+| 3 | [Most AI music is not slop](https://www.reddit.com/r/SunoAI/comments/1vdfd91/most_ai_music_is_not_slop/) | r/SunoAI | – | – |
+| 4 | [Do not hope on the Spotify Algorithm to "distribute" your Music](https://www.reddit.com/r/SunoAI/comments/1vdpdvs/do_not_hope_on_the_spotify_algorithm_to/) | r/SunoAI | – | – |
+| 5 | [Breakup songs](https://www.reddit.com/r/SunoAI/comments/1ve1hzo/breakup_songs/) | r/SunoAI | – | – |
+| 6 | [Gush About Your Songs](https://www.reddit.com/r/SunoAI/comments/1vdzt68/gush_about_your_songs/) | r/SunoAI | – | – |
+| 7 | [Suno should stop advertising services that clearly do not work and that they have no inten](https://www.reddit.com/r/SunoAI/comments/1vdxiyx/suno_should_stop_advertising_services_that/) | r/SunoAI | – | – |
+| 8 | [Most surprised you've been by an image Suno created for a song?](https://www.reddit.com/r/SunoAI/comments/1ve24zp/most_surprised_youve_been_by_an_image_suno/) | r/SunoAI | – | – |
+| 9 | [is this necessary 🤣](https://www.reddit.com/r/SunoAI/comments/1vdvozx/is_this_necessary/) | r/SunoAI | – | – |
+| 10 | [When To Release?](https://www.reddit.com/r/SunoAI/comments/1vdt2dy/when_to_release/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-08-02.json`](data/daily/2026-08-02.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-08-03.json`](data/daily/2026-08-03.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-08-02 08:43 UTC_
+_Last updated: 2026-08-03 10:14 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
