@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-08-03
+### Daily Digest — 2026-08-04
 
-**56 posts** archived from 3 subreddits
+**59 posts** archived from 5 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [AI music isn’t the problem. AI slop is.](https://www.reddit.com/r/SunoAI/comments/1vdeh76/ai_music_isnt_the_problem_ai_slop_is/) | r/SunoAI | – | – |
-| 2 | [Drop Your Spotify Songs](https://www.reddit.com/r/SunoAI/comments/1vdi8bx/drop_your_spotify_songs/) | r/SunoAI | – | – |
-| 3 | [Most AI music is not slop](https://www.reddit.com/r/SunoAI/comments/1vdfd91/most_ai_music_is_not_slop/) | r/SunoAI | – | – |
-| 4 | [Do not hope on the Spotify Algorithm to "distribute" your Music](https://www.reddit.com/r/SunoAI/comments/1vdpdvs/do_not_hope_on_the_spotify_algorithm_to/) | r/SunoAI | – | – |
-| 5 | [Breakup songs](https://www.reddit.com/r/SunoAI/comments/1ve1hzo/breakup_songs/) | r/SunoAI | – | – |
-| 6 | [Gush About Your Songs](https://www.reddit.com/r/SunoAI/comments/1vdzt68/gush_about_your_songs/) | r/SunoAI | – | – |
-| 7 | [Suno should stop advertising services that clearly do not work and that they have no inten](https://www.reddit.com/r/SunoAI/comments/1vdxiyx/suno_should_stop_advertising_services_that/) | r/SunoAI | – | – |
-| 8 | [Most surprised you've been by an image Suno created for a song?](https://www.reddit.com/r/SunoAI/comments/1ve24zp/most_surprised_youve_been_by_an_image_suno/) | r/SunoAI | – | – |
-| 9 | [is this necessary 🤣](https://www.reddit.com/r/SunoAI/comments/1vdvozx/is_this_necessary/) | r/SunoAI | – | – |
-| 10 | [When To Release?](https://www.reddit.com/r/SunoAI/comments/1vdt2dy/when_to_release/) | r/SunoAI | – | – |
+| 1 | [Don't read this if you are somebody.](https://www.reddit.com/r/SunoAI/comments/1vekxsi/dont_read_this_if_you_are_somebody/) | r/SunoAI | – | – |
+| 2 | [I’M TIRED (AND YOU SHOULD TOO)](https://www.reddit.com/r/SunoAI/comments/1vete2d/im_tired_and_you_should_too/) | r/SunoAI | – | – |
+| 3 | [Your Best Song](https://www.reddit.com/r/SunoAI/comments/1vecyns/your_best_song/) | r/SunoAI | – | – |
+| 4 | [Your Songs on Wax? We’re Exploring It!](https://www.reddit.com/r/SunoAI/comments/1veg1q0/your_songs_on_wax_were_exploring_it/) | r/SunoAI | – | – |
+| 5 | [🎵 Round 2 – Let's Share Our Best AI Songs (and Actually Listen This Time)](https://www.reddit.com/r/SunoAI/comments/1ved9y3/round_2_lets_share_our_best_ai_songs_and_actually/) | r/SunoAI | – | – |
+| 6 | [German court rules AI music firm Suno broke copyright rules](https://www.reddit.com/r/SunoAI/comments/1ve93lh/german_court_rules_ai_music_firm_suno_broke/) | r/SunoAI | – | – |
+| 7 | [Spotify has 'deleted' 75 million AI songs... or not?](https://www.reddit.com/r/SunoAI/comments/1vepkf1/spotify_has_deleted_75_million_ai_songs_or_not/) | r/SunoAI | – | – |
+| 8 | [Spotify analytics make no sense](https://www.reddit.com/r/SunoAI/comments/1vefaiy/spotify_analytics_make_no_sense/) | r/SunoAI | – | – |
+| 9 | [How can I trust someone with 4200 songs on Suno?](https://www.reddit.com/r/SunoAI/comments/1vf1dxh/how_can_i_trust_someone_with_4200_songs_on_suno/) | r/SunoAI | – | – |
+| 10 | [MiniMax H3 seems like it's a pretty promising for generating music videos locally](https://www.reddit.com/r/SunoAI/comments/1vexues/minimax_h3_seems_like_its_a_pretty_promising_for/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-08-03.json`](data/daily/2026-08-03.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-08-04.json`](data/daily/2026-08-04.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-08-03 10:14 UTC_
+_Last updated: 2026-08-04 09:14 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
