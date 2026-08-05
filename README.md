@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-08-04
+### Daily Digest — 2026-08-05
 
-**59 posts** archived from 5 subreddits
+**63 posts** archived from 4 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [Don't read this if you are somebody.](https://www.reddit.com/r/SunoAI/comments/1vekxsi/dont_read_this_if_you_are_somebody/) | r/SunoAI | – | – |
-| 2 | [I’M TIRED (AND YOU SHOULD TOO)](https://www.reddit.com/r/SunoAI/comments/1vete2d/im_tired_and_you_should_too/) | r/SunoAI | – | – |
-| 3 | [Your Best Song](https://www.reddit.com/r/SunoAI/comments/1vecyns/your_best_song/) | r/SunoAI | – | – |
-| 4 | [Your Songs on Wax? We’re Exploring It!](https://www.reddit.com/r/SunoAI/comments/1veg1q0/your_songs_on_wax_were_exploring_it/) | r/SunoAI | – | – |
-| 5 | [🎵 Round 2 – Let's Share Our Best AI Songs (and Actually Listen This Time)](https://www.reddit.com/r/SunoAI/comments/1ved9y3/round_2_lets_share_our_best_ai_songs_and_actually/) | r/SunoAI | – | – |
-| 6 | [German court rules AI music firm Suno broke copyright rules](https://www.reddit.com/r/SunoAI/comments/1ve93lh/german_court_rules_ai_music_firm_suno_broke/) | r/SunoAI | – | – |
-| 7 | [Spotify has 'deleted' 75 million AI songs... or not?](https://www.reddit.com/r/SunoAI/comments/1vepkf1/spotify_has_deleted_75_million_ai_songs_or_not/) | r/SunoAI | – | – |
-| 8 | [Spotify analytics make no sense](https://www.reddit.com/r/SunoAI/comments/1vefaiy/spotify_analytics_make_no_sense/) | r/SunoAI | – | – |
-| 9 | [How can I trust someone with 4200 songs on Suno?](https://www.reddit.com/r/SunoAI/comments/1vf1dxh/how_can_i_trust_someone_with_4200_songs_on_suno/) | r/SunoAI | – | – |
-| 10 | [MiniMax H3 seems like it's a pretty promising for generating music videos locally](https://www.reddit.com/r/SunoAI/comments/1vexues/minimax_h3_seems_like_its_a_pretty_promising_for/) | r/SunoAI | – | – |
+| 1 | [New promotion pots](https://www.reddit.com/r/SunoAI/comments/1vfj4pc/new_promotion_pots/) | r/SunoAI | – | – |
+| 2 | ["Your Lyrics Contain Copyrighted Material"](https://www.reddit.com/r/SunoAI/comments/1vfv5dw/your_lyrics_contain_copyrighted_material/) | r/SunoAI | – | – |
+| 3 | [The Cult of Static: Can someone explain to me what it's all about?](https://www.reddit.com/r/SunoAI/comments/1vf5jdx/the_cult_of_static_can_someone_explain_to_me_what/) | r/SunoAI | – | – |
+| 4 | [Looking for active metal (all genres) creators](https://www.reddit.com/r/SunoAI/comments/1vf8u4l/looking_for_active_metal_all_genres_creators/) | r/SunoAI | – | – |
+| 5 | [I realized it's better to translate English lyrics into Japanese](https://www.reddit.com/r/SunoAI/comments/1vfqd1f/i_realized_its_better_to_translate_english_lyrics/) | r/SunoAI | – | – |
+| 6 | [AI Generated / AI Assisted: We are low key creating a genre](https://www.reddit.com/r/SunoAI/comments/1vfe9np/ai_generated_ai_assisted_we_are_low_key_creating/) | r/SunoAI | – | – |
+| 7 | [\[Indie\] Peach Tree](https://www.reddit.com/r/SunoAI/comments/1vfqxrn/indie_peach_tree/) | r/SunoAI | – | – |
+| 8 | ['verify you are human' constantly appears every 15 seconds despite already clicking the ch](https://www.reddit.com/r/SunoAI/comments/1vffzn9/verify_you_are_human_constantly_appears_every_15/) | r/SunoAI | – | – |
+| 9 | [\[Pop\] Maybe Next Week by Risu](https://www.reddit.com/r/SunoAI/comments/1vfo87i/pop_maybe_next_week_by_risu/) | r/SunoAI | – | – |
+| 10 | [\[French House / Electronic\] Machine Heart (Original Mix) by abackert1](https://www.reddit.com/r/SunoAI/comments/1vflo68/french_house_electronic_machine_heart_original/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-08-04.json`](data/daily/2026-08-04.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-08-05.json`](data/daily/2026-08-05.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-08-04 09:14 UTC_
+_Last updated: 2026-08-05 09:12 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
