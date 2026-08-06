@@ -42,8 +42,8 @@ def list_migrations() -> list[Path]:
     return sorted(MIGRATIONS_DIR.glob("*.sql"))
 
 
-def dry_run(migrations: list[Path]) -> int:
-    print("SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY not set.", file=sys.stderr)
+def dry_run(migrations: list[Path], *, reason: str) -> int:
+    print(reason, file=sys.stderr)
     print("Dry-run only — no SQL will be applied.", file=sys.stderr)
     if not migrations:
         print("No migration files found under", MIGRATIONS_DIR)
@@ -147,9 +147,21 @@ def main(argv: list[str] | None = None) -> int:
     migrations = list_migrations()
     supabase_url = os.environ.get("SUPABASE_URL")
     service_role_key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    has_credentials = bool(supabase_url and service_role_key)
 
-    if args.dry_run or not supabase_url or not service_role_key:
-        return dry_run(migrations)
+    if args.dry_run:
+        reason = (
+            "--dry-run requested; credentials present but apply skipped."
+            if has_credentials
+            else "SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY not set."
+        )
+        return dry_run(migrations, reason=reason)
+
+    if not has_credentials:
+        return dry_run(
+            migrations,
+            reason="SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY not set.",
+        )
 
     return apply_with_credentials(
         migrations, supabase_url, service_role_key, args.force_rpc

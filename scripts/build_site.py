@@ -161,6 +161,20 @@ def write_index(archives: list[dict]) -> None:
     )
 
 
+def prune_stale_day_pages(keep_dates: set[str]) -> int:
+    """Remove site/days/*.html files whose dates are no longer archived."""
+    if not DAYS_DIR.is_dir():
+        return 0
+    removed = 0
+    for path in DAYS_DIR.glob("*.html"):
+        day = path.stem
+        if day not in keep_dates:
+            path.unlink()
+            removed += 1
+            print(f"  pruned stale day page: {path.relative_to(REPO_ROOT)}")
+    return removed
+
+
 def write_css() -> None:
     css = """:root {
   --bg: #0f1419;
@@ -238,10 +252,13 @@ def main() -> int:
     SITE_DIR.mkdir(parents=True, exist_ok=True)
     DAYS_DIR.mkdir(parents=True, exist_ok=True)
     write_css()
+    keep_dates = {archive["date"] for archive in archives}
     for archive in archives:
         write_day_page(archive)
+    pruned = prune_stale_day_pages(keep_dates)
     write_index(archives)
-    print(f"Built site/ with {len(archives)} day page(s)")
+    print(f"Built site/ with {len(archives)} day page(s)"
+          + (f" (pruned {pruned} stale)" if pruned else ""))
     if INDEX_FILE.exists():
         print(f"Index source: {INDEX_FILE.relative_to(REPO_ROOT)}")
     return 0
