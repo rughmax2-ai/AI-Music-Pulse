@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-08-05
+### Daily Digest — 2026-08-06
 
-**63 posts** archived from 4 subreddits
+**63 posts** archived from 5 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [New promotion pots](https://www.reddit.com/r/SunoAI/comments/1vfj4pc/new_promotion_pots/) | r/SunoAI | – | – |
-| 2 | ["Your Lyrics Contain Copyrighted Material"](https://www.reddit.com/r/SunoAI/comments/1vfv5dw/your_lyrics_contain_copyrighted_material/) | r/SunoAI | – | – |
-| 3 | [The Cult of Static: Can someone explain to me what it's all about?](https://www.reddit.com/r/SunoAI/comments/1vf5jdx/the_cult_of_static_can_someone_explain_to_me_what/) | r/SunoAI | – | – |
-| 4 | [Looking for active metal (all genres) creators](https://www.reddit.com/r/SunoAI/comments/1vf8u4l/looking_for_active_metal_all_genres_creators/) | r/SunoAI | – | – |
-| 5 | [I realized it's better to translate English lyrics into Japanese](https://www.reddit.com/r/SunoAI/comments/1vfqd1f/i_realized_its_better_to_translate_english_lyrics/) | r/SunoAI | – | – |
-| 6 | [AI Generated / AI Assisted: We are low key creating a genre](https://www.reddit.com/r/SunoAI/comments/1vfe9np/ai_generated_ai_assisted_we_are_low_key_creating/) | r/SunoAI | – | – |
-| 7 | [\[Indie\] Peach Tree](https://www.reddit.com/r/SunoAI/comments/1vfqxrn/indie_peach_tree/) | r/SunoAI | – | – |
-| 8 | ['verify you are human' constantly appears every 15 seconds despite already clicking the ch](https://www.reddit.com/r/SunoAI/comments/1vffzn9/verify_you_are_human_constantly_appears_every_15/) | r/SunoAI | – | – |
-| 9 | [\[Pop\] Maybe Next Week by Risu](https://www.reddit.com/r/SunoAI/comments/1vfo87i/pop_maybe_next_week_by_risu/) | r/SunoAI | – | – |
-| 10 | [\[French House / Electronic\] Machine Heart (Original Mix) by abackert1](https://www.reddit.com/r/SunoAI/comments/1vflo68/french_house_electronic_machine_heart_original/) | r/SunoAI | – | – |
+| 1 | [Is Suno down?](https://www.reddit.com/r/SunoAI/comments/1vggx9k/is_suno_down/) | r/SunoAI | – | – |
+| 2 | [Nobody talks about it, but that's where the money is.](https://www.reddit.com/r/SunoAI/comments/1vgnrsw/nobody_talks_about_it_but_thats_where_the_money_is/) | r/SunoAI | – | – |
+| 3 | [Let’s hear your dance songs](https://www.reddit.com/r/SunoAI/comments/1vgud2a/lets_hear_your_dance_songs/) | r/SunoAI | – | – |
+| 4 | [The voice feature literally sounds nothing like me?](https://www.reddit.com/r/SunoAI/comments/1vgtssl/the_voice_feature_literally_sounds_nothing_like_me/) | r/SunoAI | – | – |
+| 5 | [Suno Busy?!](https://www.reddit.com/r/SunoAI/comments/1vgh0xl/suno_busy/) | r/SunoAI | – | – |
+| 6 | [\[cyberpunk\] Bend](https://www.reddit.com/r/SunoAI/comments/1vgnbmt/cyberpunk_bend/) | r/SunoAI | – | – |
+| 7 | [\[electroclash\] Deux Étoiles](https://www.reddit.com/r/SunoAI/comments/1vgbxhs/electroclash_deux_étoiles/) | r/SunoAI | – | – |
+| 8 | [English words Suno stumbles over](https://www.reddit.com/r/SunoAI/comments/1vgqbks/english_words_suno_stumbles_over/) | r/SunoAI | – | – |
+| 9 | [How are you marketing and professionally releasing your Suno music via DistroKid?](https://www.reddit.com/r/SunoAI/comments/1vgj95q/how_are_you_marketing_and_professionally/) | r/SunoAI | – | – |
+| 10 | [I am in search of those who make Rap and Hip-Hop tracks using Suno..My Inspirations are be](https://www.reddit.com/r/SunoAI/comments/1vghyav/i_am_in_search_of_those_who_make_rap_and_hiphop/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-08-05.json`](data/daily/2026-08-05.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-08-06.json`](data/daily/2026-08-06.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-08-05 09:12 UTC_
+_Last updated: 2026-08-06 09:13 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
