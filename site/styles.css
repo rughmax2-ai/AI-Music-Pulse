@@ -1,0 +1,67 @@
+:root {
+  --bg: #0f1419;
+  --surface: #1a222c;
+  --text: #e7ecf1;
+  --muted: #9aa7b5;
+  --accent: #3d9a7a;
+  --line: #2a3542;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-body: "Segoe UI", "Helvetica Neue", sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #1c3a32 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, #243044 0%, transparent 50%),
+    var(--bg);
+  line-height: 1.5;
+}
+.site-header, main, .site-footer {
+  width: min(960px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+.site-header { padding: 2.5rem 0 1rem; }
+.brand {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+.tagline { color: var(--muted); margin: 0.35rem 0 0; }
+main { padding-bottom: 3rem; }
+h1, h2 { font-family: var(--font-display); font-weight: 600; }
+.crumb { color: var(--muted); margin-bottom: 0.75rem; }
+.crumb a { color: var(--accent); }
+.posts {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+}
+.posts th, .posts td {
+  text-align: left;
+  padding: 0.55rem 0.65rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.posts th { color: var(--muted); font-weight: 600; font-size: 0.85rem; }
+.posts a { color: var(--text); text-decoration: none; }
+.posts a:hover { color: var(--accent); text-decoration: underline; }
+.day-list ul { padding-left: 1.1rem; }
+.day-list a { color: var(--accent); }
+.meta, .empty { color: var(--muted); font-size: 0.9rem; }
+.site-footer {
+  padding: 1rem 0 2.5rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+.site-footer a { color: var(--accent); }
+@media (max-width: 640px) {
+  .posts th:nth-child(4), .posts td:nth-child(4),
+  .posts th:nth-child(5), .posts td:nth-child(5) { display: none; }
+}

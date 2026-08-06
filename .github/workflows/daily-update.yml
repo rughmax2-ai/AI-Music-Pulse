@@ -30,6 +30,14 @@ jobs:
       - name: Fetch Reddit data
         run: python scripts/fetch_reddit.py
 
+      - name: Fetch Discord data
+        # No-ops (exit 0) when DISCORD_BOT_TOKEN is unset. Phase 4 will
+        # implement real channel reads once secrets + channel IDs exist.
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_CHANNEL_IDS: ${{ secrets.DISCORD_CHANNEL_IDS }}
+        run: python scripts/fetch_discord.py
+
       - name: Sync posts to Supabase
         # Best-effort: the core digest (fetch -> README -> commit) must keep
         # working even if Supabase secrets are missing or the sync fails for
@@ -44,11 +52,14 @@ jobs:
       - name: Update README digest
         run: python scripts/update_readme.py
 
+      - name: Build static archive site
+        run: python scripts/build_site.py
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ README.md
+          git add data/ README.md site/
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else

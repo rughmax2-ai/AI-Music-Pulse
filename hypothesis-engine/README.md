@@ -42,10 +42,15 @@ and protocol deviations remain first-class records.
 
 ```bash
 python -m unittest discover -s tests -v
-python -m py_compile scripts/lock_preregistration.py
+python -m py_compile scripts/lock_preregistration.py scripts/apply_migrations.py
 python -m json.tool schemas/preregistration.schema.json >/dev/null
 python -m json.tool schemas/experiment-results.schema.json >/dev/null
+python scripts/apply_migrations.py --dry-run
 ```
+
+`apply_migrations.py` dry-runs (exit 0) when `SUPABASE_URL` /
+`SUPABASE_SERVICE_ROLE_KEY` are unset. Prefer applying the SQL via the
+Supabase SQL editor or `psql` on a **test project / branch** first.
 
 ## Lock a reviewed experiment
 

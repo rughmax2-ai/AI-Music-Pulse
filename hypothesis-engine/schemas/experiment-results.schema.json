@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rughmax2-ai/AI-Music-Pulse/hypothesis-engine/schemas/experiment-results.schema.json",
+  "title": "HypothesisEngineExperimentResults",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "experiment_id",
+    "preregistration_sha256",
+    "classification",
+    "analysis"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "experiment_id": { "type": "string", "minLength": 1 },
+    "preregistration_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "cycle_type": { "type": "string", "enum": ["existence", "mechanism"] },
+    "status": {
+      "type": "string",
+      "enum": [
+        "rated", "analyzed", "claim_candidate", "promoted",
+        "aborted", "deviated"
+      ]
+    },
+    "renders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ordinal", "blind_code"],
+        "properties": {
+          "ordinal": { "type": "integer", "minimum": 1 },
+          "blind_code": { "type": "string" },
+          "condition_code": { "type": "string" },
+          "artifact_ref": { "type": "string" },
+          "artifact_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "generated_at_utc": { "type": "string" },
+          "model_version_observed": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "ratings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["render_ordinal", "rater_id", "score"],
+        "properties": {
+          "render_ordinal": { "type": "integer", "minimum": 1 },
+          "rater_id": { "type": "string" },
+          "score": { "type": "integer", "enum": [0, 1, 2] },
+          "is_blind_repeat": { "type": "boolean" },
+          "listened_seconds": { "type": "number" },
+          "rated_at_utc": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "required": ["registered_statistic"],
+      "properties": {
+        "registered_statistic": { "type": "string" },
+        "observed_value": { "type": ["number", "null"] },
+        "uncertainty_low": { "type": ["number", "null"] },
+        "uncertainty_high": { "type": ["number", "null"] },
+        "confidence_level": { "type": ["number", "null"] },
+        "hypothesis_outcomes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "enum": ["surviving", "killed", "ambiguous"]
+          }
+        },
+        "notes": { "type": "string" },
+        "analyzed_at_utc": { "type": "string" },
+        "analyzed_by": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "effect_detected",
+        "practically_null",
+        "ambiguous",
+        "deviated",
+        "aborted"
+      ]
+    },
+    "claim_candidate": {
+      "type": ["object", "null"],
+      "properties": {
+        "claim_text": { "type": "string" },
+        "evidence_grade": {
+          "type": "string",
+          "enum": [
+            "anecdote",
+            "preregistered_effect",
+            "surviving_mechanism",
+            "contradiction",
+            "retired"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "rejected", "approved", "promoted"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "promotion": {
+      "description": "Must remain absent or deferred for first existence tests.",
+      "type": ["object", "null"],
+      "properties": {
+        "decision": {
+          "type": "string",
+          "enum": ["approved", "rejected", "deferred"]
+        },
+        "decided_by": { "type": "string" },
+        "chunks_row_id": { "type": ["string", "null"] }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
