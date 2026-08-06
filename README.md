@@ -29,7 +29,7 @@ manual work.
 
 Full structured data: [`data/daily/2026-08-06.json`](data/daily/2026-08-06.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-08-06 09:13 UTC_
+_Last updated: 2026-08-06 15:38 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
@@ -37,15 +37,15 @@ _Last updated: 2026-08-06 09:13 UTC_
 ```
 ┌────────────────┐    ┌─────────────────────┐    ┌──────────────────────┐
 │ GitHub Actions │───▶│ fetch_reddit.py     │───▶│ data/daily/DATE.json │
-│ cron (daily)   │    │ JSON API + RSS      │    │ data/index.json      │
-└────────────────┘    │ fallback, dedupe,   │    └──────────┬───────────┘
-                      │ keyword filtering   │               │
-                      └─────────────────────┘               ▼
-                                            ┌──────────────────────────┐
-                                            │ update_readme.py         │
-                                            │ renders digest ▸ README  │
-                                            │ then auto-commits        │
-                                            └──────────────────────────┘
+│ cron (daily)   │    │ fetch_discord.py    │    │ data/index.json      │
+└────────────────┘    │ (no-op w/o token)   │    └──────────┬───────────┘
+                      └─────────────────────┘               │
+                           ┌────────────────────────────────┤
+                           ▼                                ▼
+              ┌──────────────────────┐       ┌──────────────────────────┐
+              │ update_readme.py     │       │ build_site.py            │
+              │ digest ▸ README      │       │ static archive ▸ site/   │
+              └──────────────────────┘       └──────────────────────────┘
 ```
 
 1. **Fetch** — `scripts/fetch_reddit.py` pulls the top posts of the day
@@ -128,7 +128,9 @@ Requires Python 3.10+ and nothing else (standard library only):
 
 ```bash
 python scripts/fetch_reddit.py    # writes data/daily/YYYY-MM-DD.json
+python scripts/fetch_discord.py   # no-op without DISCORD_BOT_TOKEN
 python scripts/update_readme.py   # refreshes the digest in this README
+python scripts/build_site.py      # writes static pages under site/
 ```
 
 ## Experimental Prompt Research
@@ -139,12 +141,14 @@ See [`hypothesis-engine/README.md`](hypothesis-engine/README.md).
 
 ## Roadmap
 
-- [ ] Discord server digests (requires a bot token; planned as a second
-      fetcher module writing to the same schema)
+- [x] Discord server digests — scaffold wired (`fetch_discord.py` no-ops
+      without `DISCORD_BOT_TOKEN`; see [`docs/DISCORD_ACTIVATION.md`](docs/DISCORD_ACTIVATION.md))
 - [ ] Weekly trend rollups (top keywords, score deltas across days)
 - [ ] Hacker News and YouTube sources
-- [ ] Static site rendering of the archive via GitHub Pages
-- [ ] Apply Hypothesis Engine Supabase migration (branch/test project first)
+- [x] Static site rendering of the archive via GitHub Pages (`site/` +
+      Pages workflow)
+- [x] Hypothesis Engine Supabase migration (in-repo; apply on a
+      branch/test project via `hypothesis-engine/scripts/apply_migrations.py`)
 - [ ] First real existence test without claim promotion
 
 ## License

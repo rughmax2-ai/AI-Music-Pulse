@@ -31,6 +31,13 @@ git push -u origin main
 
 From then on it runs automatically every day at **06:15 UTC**.
 
+## 4. (Optional) Enable the static archive on GitHub Pages
+
+1. **Settings → Pages → Build and deployment → Source**: GitHub Actions.
+2. After a push that updates `site/` (or run **Deploy archive site to
+   GitHub Pages** manually), the archive is published from the `site/`
+   folder built by `scripts/build_site.py`.
+
 ## Notes & maintenance
 
 - **Schedule**: edit the cron line in
@@ -43,7 +50,14 @@ From then on it runs automatically every day at **06:15 UTC**.
 - **Rate limiting**: GitHub Actions runners occasionally get 429s from
   Reddit's JSON API. The fetcher automatically retries and falls back to
   RSS feeds, and the run only fails if *every* source fails.
-- **Adding sources**: append subreddits to `sources.json`. For Discord
-  later: add a `scripts/fetch_discord.py` writing the same schema and a
-  step in the workflow, with the bot token stored in
-  **Settings → Secrets and variables → Actions**.
+- **Adding sources**: append subreddits to `sources.json`. For Discord:
+  `scripts/fetch_discord.py` is wired into the daily workflow and **no-ops**
+  when `DISCORD_BOT_TOKEN` is unset. To activate later (Phase 4):
+  1. Create a Discord bot, invite it to the server with read-message access.
+  2. Store secrets under **Settings → Secrets and variables → Actions**:
+     - `DISCORD_BOT_TOKEN`
+     - `DISCORD_CHANNEL_IDS` (comma-separated channel snowflakes)
+  3. Optionally list channels in `sources.json` → `discord.channels`.
+  See [`.env.example`](.env.example) for local variable names and
+  [`docs/DISCORD_ACTIVATION.md`](docs/DISCORD_ACTIVATION.md) for the Phase 4
+  activation checklist.

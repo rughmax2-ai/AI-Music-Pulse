@@ -14,5 +14,10 @@
     "musicgen", "ai vocals", "voice clone", "ai artist", "ai producer"
   ],
   "posts_per_subreddit": 25,
-  "min_score": 1
+  "min_score": 1,
+  "discord": {
+    "enabled": true,
+    "channels": [],
+    "notes": "Populate channels with {id, topic} or set DISCORD_CHANNEL_IDS. Fetch no-ops without DISCORD_BOT_TOKEN."
+  }
 }
