@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rughmax2-ai/AI-Music-Pulse/hypothesis-engine/schemas/preregistration.schema.json",
+  "title": "HypothesisEnginePreregistration",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "experiment_id",
+    "observation_id",
+    "cycle_number",
+    "cycle_type",
+    "status",
+    "scope",
+    "baseline",
+    "conditions",
+    "collection",
+    "human_rating",
+    "effect_gate",
+    "integrity"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "experiment_id": { "type": "string", "minLength": 1 },
+    "observation_id": { "type": "string", "minLength": 1 },
+    "cycle_number": { "type": "integer", "minimum": 1 },
+    "cycle_type": { "type": "string", "enum": ["existence", "mechanism"] },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft", "locked", "collecting", "rated", "analyzed",
+        "claim_candidate", "promoted", "aborted", "deviated"
+      ]
+    },
+    "observation": {
+      "type": "object",
+      "required": ["raw_text", "operationalized_effect", "predicted_direction"],
+      "properties": {
+        "raw_text": { "type": "string" },
+        "operationalized_effect": { "type": "string" },
+        "predicted_direction": {
+          "type": "string",
+          "enum": ["increase", "decrease", "two_sided"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "surviving_existence_result": {
+      "type": "object",
+      "properties": {
+        "experiment_id": { "type": "string" },
+        "preregistration_sha256": { "type": "string" },
+        "classification": { "type": "string" },
+        "registered_effect": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "scope": {
+      "type": "object",
+      "required": ["provider", "model_version"],
+      "properties": {
+        "provider": { "type": "string" },
+        "model_version": { "type": "string" },
+        "interface_mode": { "type": "string" },
+        "fields_under_test": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "locale": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "applicable_confirmed_priors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "reason": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "hypotheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "statement", "prediction", "kill_condition"],
+        "properties": {
+          "id": { "type": "string" },
+          "statement": { "type": "string" },
+          "prediction": { "type": "string" },
+          "primary_measurement": { "type": "string" },
+          "kill_condition": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "baseline": {
+      "type": "object",
+      "properties": {
+        "style": { "type": "string" },
+        "lyrics": { "type": "string" },
+        "exclude": { "type": "string" },
+        "other_controls": { "type": "object" }
+      },
+      "additionalProperties": true
+    },
+    "ablation": {
+      "type": "object",
+      "properties": {
+        "variable_name": { "type": "string" },
+        "invariant_fields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "exact_diff": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "conditions": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["code", "blind_code", "label", "n_planned", "change"],
+        "properties": {
+          "code": { "type": "string" },
+          "blind_code": { "type": "string" },
+          "label": { "type": "string" },
+          "n_planned": { "type": "integer", "minimum": 1 },
+          "change": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "prediction_matrix": {
+      "type": "array",
+      "items": { "type": "object", "additionalProperties": true }
+    },
+    "discriminability_review": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "collection": {
+      "type": "object",
+      "required": ["render_order_seed", "version_drift_rule", "artifact_policy"],
+      "properties": {
+        "render_order_seed": { "type": "string" },
+        "render_order": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "generation_window": { "type": "string" },
+        "version_drift_rule": { "type": "string" },
+        "artifact_policy": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "human_rating": {
+      "type": "object",
+      "required": ["blind", "scale", "primary_endpoint"],
+      "properties": {
+        "rater_count": { "type": "integer", "minimum": 1 },
+        "blind": { "type": "boolean" },
+        "maximum_listen_seconds": { "type": "number" },
+        "scale": {
+          "type": "object",
+          "required": ["kill", "fine", "magic"],
+          "properties": {
+            "kill": { "type": "integer" },
+            "fine": { "type": "integer" },
+            "magic": { "type": "integer" }
+          }
+        },
+        "primary_endpoint": { "type": "string" },
+        "secondary_endpoints": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "magic_verdict": { "type": "string" },
+        "blinded_repeat_fraction": { "type": "number" }
+      },
+      "additionalProperties": true
+    },
+    "acoustic_measurement": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "effect_gate": {
+      "type": "object",
+      "required": ["registered_statistic"],
+      "properties": {
+        "registered_statistic": { "type": "string" },
+        "minimum_practical_effect": {},
+        "region_of_practical_equivalence": { "type": "object" },
+        "uncertainty_method": { "type": "string" },
+        "confidence_level": { "type": "number" },
+        "effect_detected_rule": { "type": "string" },
+        "practically_null_rule": { "type": "string" },
+        "ambiguous_rule": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "analysis": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "integrity": {
+      "type": "object",
+      "required": ["preregistration_sha256", "locked_at_utc", "locked_by"],
+      "properties": {
+        "preregistration_sha256": { "type": ["string", "null"] },
+        "locked_at_utc": { "type": ["string", "null"] },
+        "locked_by": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true,
+  "allOf": [
+    {
+      "if": {
+        "properties": { "cycle_type": { "const": "existence" } }
+      },
+      "then": {
+        "required": ["observation"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "cycle_type": { "const": "mechanism" } }
+      },
+      "then": {
+        "required": ["surviving_existence_result", "hypotheses", "prediction_matrix"]
+      }
+    }
+  ]
+}
