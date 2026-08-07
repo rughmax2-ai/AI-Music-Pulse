@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-08-06
+### Daily Digest — 2026-08-07
 
-**63 posts** archived from 5 subreddits
+**58 posts** archived from 4 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [Is Suno down?](https://www.reddit.com/r/SunoAI/comments/1vggx9k/is_suno_down/) | r/SunoAI | – | – |
-| 2 | [Nobody talks about it, but that's where the money is.](https://www.reddit.com/r/SunoAI/comments/1vgnrsw/nobody_talks_about_it_but_thats_where_the_money_is/) | r/SunoAI | – | – |
-| 3 | [Let’s hear your dance songs](https://www.reddit.com/r/SunoAI/comments/1vgud2a/lets_hear_your_dance_songs/) | r/SunoAI | – | – |
-| 4 | [The voice feature literally sounds nothing like me?](https://www.reddit.com/r/SunoAI/comments/1vgtssl/the_voice_feature_literally_sounds_nothing_like_me/) | r/SunoAI | – | – |
-| 5 | [Suno Busy?!](https://www.reddit.com/r/SunoAI/comments/1vgh0xl/suno_busy/) | r/SunoAI | – | – |
-| 6 | [\[cyberpunk\] Bend](https://www.reddit.com/r/SunoAI/comments/1vgnbmt/cyberpunk_bend/) | r/SunoAI | – | – |
-| 7 | [\[electroclash\] Deux Étoiles](https://www.reddit.com/r/SunoAI/comments/1vgbxhs/electroclash_deux_étoiles/) | r/SunoAI | – | – |
-| 8 | [English words Suno stumbles over](https://www.reddit.com/r/SunoAI/comments/1vgqbks/english_words_suno_stumbles_over/) | r/SunoAI | – | – |
-| 9 | [How are you marketing and professionally releasing your Suno music via DistroKid?](https://www.reddit.com/r/SunoAI/comments/1vgj95q/how_are_you_marketing_and_professionally/) | r/SunoAI | – | – |
-| 10 | [I am in search of those who make Rap and Hip-Hop tracks using Suno..My Inspirations are be](https://www.reddit.com/r/SunoAI/comments/1vghyav/i_am_in_search_of_those_who_make_rap_and_hiphop/) | r/SunoAI | – | – |
+| 1 | [Let the witch hunt begin](https://www.reddit.com/r/SunoAI/comments/1vh4234/let_the_witch_hunt_begin/) | r/SunoAI | – | – |
+| 2 | [Updates incoming 👀](https://www.reddit.com/r/SunoAI/comments/1vh2zbn/updates_incoming/) | r/SunoAI | – | – |
+| 3 | [Info on the Suno Changes](https://www.reddit.com/r/SunoAI/comments/1vh9ahf/info_on_the_suno_changes/) | r/SunoAI | – | – |
+| 4 | [“Your Lyrics Contain Copyrighted Material” for Oohhs and Ahhhs](https://www.reddit.com/r/SunoAI/comments/1vhbvmo/your_lyrics_contain_copyrighted_material_for/) | r/SunoAI | – | – |
+| 5 | [Why does r/sunoai allow hateful trolls? Where is the moderation?](https://www.reddit.com/r/SunoAI/comments/1vh52sg/why_does_rsunoai_allow_hateful_trolls_where_is/) | r/SunoAI | – | – |
+| 6 | [Questions about Suno’s new watermarks & fingerprints](https://www.reddit.com/r/SunoAI/comments/1vh5saa/questions_about_sunos_new_watermarks_fingerprints/) | r/SunoAI | – | – |
+| 7 | [Allright Suno cats. Let’s hear your weird songs](https://www.reddit.com/r/SunoAI/comments/1vhdc27/allright_suno_cats_lets_hear_your_weird_songs/) | r/SunoAI | – | – |
+| 8 | [No commercial rights?!?](https://www.reddit.com/r/SunoAI/comments/1vhltjq/no_commercial_rights/) | r/SunoAI | – | – |
+| 9 | [2nd Request to Remix](https://www.reddit.com/r/SunoAI/comments/1vhixim/2nd_request_to_remix/) | r/SunoAI | – | – |
+| 10 | [\[Trip-Hop\] Sleep Transit \| Winds of Urartu - "The Violet Commission"](https://www.reddit.com/r/SunoAI/comments/1vh7s13/triphop_sleep_transit_winds_of_urartu_the_violet/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-08-06.json`](data/daily/2026-08-06.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-08-07.json`](data/daily/2026-08-07.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-08-06 15:38 UTC_
+_Last updated: 2026-08-07 07:47 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works

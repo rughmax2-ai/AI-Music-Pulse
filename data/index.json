@@ -1,6 +1,12 @@
 {
   "description": "Rolling index of daily AI music archives",
   "days": {
+    "2026-08-07": {
+      "file": "daily/2026-08-07.json",
+      "total_posts": 58,
+      "total_score": 0,
+      "total_comments": 0
+    },
     "2026-08-06": {
       "file": "daily/2026-08-06.json",
       "total_posts": 63,
@@ -80,6 +86,6 @@
       "total_comments": 0
     }
   },
-  "last_updated_utc": "2026-08-06T09:13:55.298432+00:00",
-  "day_count": 13
+  "last_updated_utc": "2026-08-07T07:47:19.374805+00:00",
+  "day_count": 14
 }
