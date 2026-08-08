@@ -10,26 +10,26 @@ manual work.
 
 <!-- DIGEST:START -->
 
-### Daily Digest — 2026-08-07
+### Daily Digest — 2026-08-08
 
-**58 posts** archived from 4 subreddits
+**66 posts** archived from 5 subreddits
 
 | # | Post | Subreddit | Score | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [Let the witch hunt begin](https://www.reddit.com/r/SunoAI/comments/1vh4234/let_the_witch_hunt_begin/) | r/SunoAI | – | – |
-| 2 | [Updates incoming 👀](https://www.reddit.com/r/SunoAI/comments/1vh2zbn/updates_incoming/) | r/SunoAI | – | – |
-| 3 | [Info on the Suno Changes](https://www.reddit.com/r/SunoAI/comments/1vh9ahf/info_on_the_suno_changes/) | r/SunoAI | – | – |
-| 4 | [“Your Lyrics Contain Copyrighted Material” for Oohhs and Ahhhs](https://www.reddit.com/r/SunoAI/comments/1vhbvmo/your_lyrics_contain_copyrighted_material_for/) | r/SunoAI | – | – |
-| 5 | [Why does r/sunoai allow hateful trolls? Where is the moderation?](https://www.reddit.com/r/SunoAI/comments/1vh52sg/why_does_rsunoai_allow_hateful_trolls_where_is/) | r/SunoAI | – | – |
-| 6 | [Questions about Suno’s new watermarks & fingerprints](https://www.reddit.com/r/SunoAI/comments/1vh5saa/questions_about_sunos_new_watermarks_fingerprints/) | r/SunoAI | – | – |
-| 7 | [Allright Suno cats. Let’s hear your weird songs](https://www.reddit.com/r/SunoAI/comments/1vhdc27/allright_suno_cats_lets_hear_your_weird_songs/) | r/SunoAI | – | – |
-| 8 | [No commercial rights?!?](https://www.reddit.com/r/SunoAI/comments/1vhltjq/no_commercial_rights/) | r/SunoAI | – | – |
-| 9 | [2nd Request to Remix](https://www.reddit.com/r/SunoAI/comments/1vhixim/2nd_request_to_remix/) | r/SunoAI | – | – |
-| 10 | [\[Trip-Hop\] Sleep Transit \| Winds of Urartu - "The Violet Commission"](https://www.reddit.com/r/SunoAI/comments/1vh7s13/triphop_sleep_transit_winds_of_urartu_the_violet/) | r/SunoAI | – | – |
+| 1 | [I think Reddit is infected with bots.](https://www.reddit.com/r/SunoAI/comments/1vi9dsj/i_think_reddit_is_infected_with_bots/) | r/SunoAI | – | – |
+| 2 | [New update](https://www.reddit.com/r/SunoAI/comments/1vi0hdt/new_update/) | r/SunoAI | – | – |
+| 3 | [Stop trying to find ways to try & circumvent Suno anti-fraud measures & encouraging others](https://www.reddit.com/r/SunoAI/comments/1vhyugk/stop_trying_to_find_ways_to_try_circumvent_suno/) | r/SunoAI | – | – |
+| 4 | [Using "my voice" is hilarious](https://www.reddit.com/r/SunoAI/comments/1vi852x/using_my_voice_is_hilarious/) | r/SunoAI | – | – |
+| 5 | [New AI song promotion post](https://www.reddit.com/r/SunoAI/comments/1vif9wq/new_ai_song_promotion_post/) | r/SunoAI | – | – |
+| 6 | [Voices just landed on mobile 🎶🎤](https://www.reddit.com/r/SunoAI/comments/1vi22b2/voices_just_landed_on_mobile/) | r/SunoAI | – | – |
+| 7 | [Spotify Playlists for Suno Artists Post #3](https://www.reddit.com/r/SunoAI/comments/1vhycnj/spotify_playlists_for_suno_artists_post_3/) | r/SunoAI | – | – |
+| 8 | [Am I stupid? Or does Suno just SUCK at following prompts?](https://www.reddit.com/r/SunoAI/comments/1vi3g3v/am_i_stupid_or_does_suno_just_suck_at_following/) | r/SunoAI | – | – |
+| 9 | [Just made my first Ai Music account w/ Suno Pro](https://www.reddit.com/r/SunoAI/comments/1vii4aj/just_made_my_first_ai_music_account_w_suno_pro/) | r/SunoAI | – | – |
+| 10 | [Novelty or the way around music streaming services?](https://www.reddit.com/r/SunoAI/comments/1vifwf2/novelty_or_the_way_around_music_streaming_services/) | r/SunoAI | – | – |
 
-Full structured data: [`data/daily/2026-08-07.json`](data/daily/2026-08-07.json) · Archive index: [`data/index.json`](data/index.json)
+Full structured data: [`data/daily/2026-08-08.json`](data/daily/2026-08-08.json) · Archive index: [`data/index.json`](data/index.json)
 
-_Last updated: 2026-08-07 07:47 UTC_
+_Last updated: 2026-08-08 07:21 UTC_
 <!-- DIGEST:END -->
 
 ## How It Works
